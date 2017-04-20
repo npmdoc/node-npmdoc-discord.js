@@ -1,0 +1,5160 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/hydrabolt/discord.js#readme">discord.js (v11.0.0)</a>
+</h1>
+<h4>A powerful library for interacting with the Discord API</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.discord.js">module discord.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Channel">
+            function <span class="apidocSignatureSpan">discord.js.</span>Channel
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Client">
+            function <span class="apidocSignatureSpan">discord.js.</span>Client
+            <span class="apidocSignatureSpan">(options = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.ClientOAuth2Application">
+            function <span class="apidocSignatureSpan">discord.js.</span>ClientOAuth2Application
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.ClientUser">
+            function <span class="apidocSignatureSpan">discord.js.</span>ClientUser
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Collection">
+            function <span class="apidocSignatureSpan">discord.js.</span>Collection
+            <span class="apidocSignatureSpan">(iterable)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.DMChannel">
+            function <span class="apidocSignatureSpan">discord.js.</span>DMChannel
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Emoji">
+            function <span class="apidocSignatureSpan">discord.js.</span>Emoji
+            <span class="apidocSignatureSpan">(guild, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.EvaluatedPermissions">
+            function <span class="apidocSignatureSpan">discord.js.</span>EvaluatedPermissions
+            <span class="apidocSignatureSpan">(member, raw)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Game">
+            function <span class="apidocSignatureSpan">discord.js.</span>Game
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.GroupDMChannel">
+            function <span class="apidocSignatureSpan">discord.js.</span>GroupDMChannel
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Guild">
+            function <span class="apidocSignatureSpan">discord.js.</span>Guild
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.GuildChannel">
+            function <span class="apidocSignatureSpan">discord.js.</span>GuildChannel
+            <span class="apidocSignatureSpan">(guild, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.GuildMember">
+            function <span class="apidocSignatureSpan">discord.js.</span>GuildMember
+            <span class="apidocSignatureSpan">(guild, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Invite">
+            function <span class="apidocSignatureSpan">discord.js.</span>Invite
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Message">
+            function <span class="apidocSignatureSpan">discord.js.</span>Message
+            <span class="apidocSignatureSpan">(channel, data, client)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageAttachment">
+            function <span class="apidocSignatureSpan">discord.js.</span>MessageAttachment
+            <span class="apidocSignatureSpan">(message, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageCollector">
+            function <span class="apidocSignatureSpan">discord.js.</span>MessageCollector
+            <span class="apidocSignatureSpan">(message, collector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed">
+            function <span class="apidocSignatureSpan">discord.js.</span>MessageEmbed
+            <span class="apidocSignatureSpan">(message, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageReaction">
+            function <span class="apidocSignatureSpan">discord.js.</span>MessageReaction
+            <span class="apidocSignatureSpan">(message, emoji, count, me)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.OAuth2Application">
+            function <span class="apidocSignatureSpan">discord.js.</span>OAuth2Application
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.PartialGuild">
+            function <span class="apidocSignatureSpan">discord.js.</span>PartialGuild
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.PartialGuildChannel">
+            function <span class="apidocSignatureSpan">discord.js.</span>PartialGuildChannel
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.PermissionOverwrites">
+            function <span class="apidocSignatureSpan">discord.js.</span>PermissionOverwrites
+            <span class="apidocSignatureSpan">(guildChannel, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Presence">
+            function <span class="apidocSignatureSpan">discord.js.</span>Presence
+            <span class="apidocSignatureSpan">(data = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.ReactionEmoji">
+            function <span class="apidocSignatureSpan">discord.js.</span>ReactionEmoji
+            <span class="apidocSignatureSpan">(reaction, name, id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.RichEmbed">
+            function <span class="apidocSignatureSpan">discord.js.</span>RichEmbed
+            <span class="apidocSignatureSpan">(data = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Role">
+            function <span class="apidocSignatureSpan">discord.js.</span>Role
+            <span class="apidocSignatureSpan">(guild, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Shard">
+            function <span class="apidocSignatureSpan">discord.js.</span>Shard
+            <span class="apidocSignatureSpan">(manager, id, args = [])</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.ShardClientUtil">
+            function <span class="apidocSignatureSpan">discord.js.</span>ShardClientUtil
+            <span class="apidocSignatureSpan">(client)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.ShardingManager">
+            function <span class="apidocSignatureSpan">discord.js.</span>ShardingManager
+            <span class="apidocSignatureSpan">(file, options = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.TextChannel">
+            function <span class="apidocSignatureSpan">discord.js.</span>TextChannel
+            <span class="apidocSignatureSpan">(guild, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.User">
+            function <span class="apidocSignatureSpan">discord.js.</span>User
+            <span class="apidocSignatureSpan">(client, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.VoiceChannel">
+            function <span class="apidocSignatureSpan">discord.js.</span>VoiceChannel
+            <span class="apidocSignatureSpan">(guild, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Webhook">
+            function <span class="apidocSignatureSpan">discord.js.</span>Webhook
+            <span class="apidocSignatureSpan">(client, dataOrID, token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.WebhookClient">
+            function <span class="apidocSignatureSpan">discord.js.</span>WebhookClient
+            <span class="apidocSignatureSpan">('1234', 'abcdef')</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.escapeMarkdown">
+            function <span class="apidocSignatureSpan">discord.js.</span>escapeMarkdown
+            <span class="apidocSignatureSpan">(text, onlyCodeBlock = false, onlyInlineCode = false)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.fetchRecommendedShards">
+            function <span class="apidocSignatureSpan">discord.js.</span>fetchRecommendedShards
+            <span class="apidocSignatureSpan">(token)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.js.MessageEmbed">
+            function <span class="apidocSignatureSpan">discord.js.</span>js.MessageEmbed
+            <span class="apidocSignatureSpan">(message, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.splitMessage">
+            function <span class="apidocSignatureSpan">discord.js.</span>splitMessage
+            <span class="apidocSignatureSpan">(text, { maxLength = 1950, char = '\n', prepend = '', append = '' } = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">discord.js.</span>Constants</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">discord.js.</span>js.Presence</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">discord.js.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.discord.js.MessageEmbed">module discord.js.MessageEmbed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed.MessageEmbed">
+            function <span class="apidocSignatureSpan">discord.js.</span>MessageEmbed
+            <span class="apidocSignatureSpan">(message, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed.Author">
+            function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Author
+            <span class="apidocSignatureSpan">(embed, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed.Field">
+            function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Field
+            <span class="apidocSignatureSpan">(embed, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed.Footer">
+            function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Footer
+            <span class="apidocSignatureSpan">(embed, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed.Provider">
+            function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Provider
+            <span class="apidocSignatureSpan">(embed, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.MessageEmbed.Thumbnail">
+            function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Thumbnail
+            <span class="apidocSignatureSpan">(embed, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.discord.js.Presence">module discord.js.Presence</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Presence.Presence">
+            function <span class="apidocSignatureSpan">discord.js.</span>Presence
+            <span class="apidocSignatureSpan">(data = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.discord.js.Presence.Game">
+            function <span class="apidocSignatureSpan">discord.js.Presence.</span>Game
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.discord.js" id="apidoc.module.discord.js">module discord.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Channel" id="apidoc.element.discord.js.Channel">
+        function <span class="apidocSignatureSpan">discord.js.</span>Channel
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Channel {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated the Channel
+     * @name Channel#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    /**
+     * The type of the channel, either:
+     * * `dm` - a DM channel
+     * * `group` - a Group DM channel
+     * * `text` - a guild text channel
+     * * `voice` - a guild voice channel
+     * @type {string}
+     */
+    this.type = null;
+
+    if (data) this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The unique ID of the channel
+     * @type {string}
+     */
+    this.id = data.id;
+  }
+
+  /**
+   * The timestamp the channel was created at
+   * @type {number}
+   * @readonly
+   */
+  get createdTimestamp() {
+    return (this.id / 4194304) + 1420070400000;
+  }
+
+  /**
+   * The time the channel was created
+   * @type {Date}
+   * @readonly
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * Deletes the channel
+   * @returns {Promise&lt;Channel&gt;}
+   * @example
+   * // delete the channel
+   * channel.delete()
+   *  .then() // success
+   *  .catch(console.error); // log error
+   */
+  delete() {
+    return this.client.rest.methods.deleteChannel(this);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Client" id="apidoc.element.discord.js.Client">
+        function <span class="apidocSignatureSpan">discord.js.</span>Client
+        <span class="apidocSignatureSpan">(options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Client extends EventEmitter {
+<span class="apidocCodeCommentSpan">  /**
+   * @param {ClientOptions} [options] Options for the client
+   */
+</span>  constructor(options = {}) {
+    super();
+
+    // Obtain shard details from environment
+    if (!options.shardId &amp;&amp; 'SHARD_ID' in process.env) options.shardId = Number(process.env.SHARD_ID);
+    if (!options.shardCount &amp;&amp; 'SHARD_COUNT' in process.env) options.shardCount = Number(process.env.SHARD_COUNT);
+
+    /**
+     * The options the client was instantiated with
+     * @type {ClientOptions}
+     */
+    this.options = mergeDefault(Constants.DefaultOptions, options);
+    this._validateOptions();
+
+    /**
+     * The REST manager of the client
+     * @type {RESTManager}
+     * @private
+     */
+    this.rest = new RESTManager(this);
+
+    /**
+     * The data manager of the Client
+     * @type {ClientDataManager}
+     * @private
+     */
+    this.dataManager = new ClientDataManager(this);
+
+    /**
+     * The manager of the Client
+     * @type {ClientManager}
+     * @private
+     */
+    this.manager = new ClientManager(this);
+
+    /**
+     * The WebSocket Manager of the Client
+     * @type {WebSocketManager}
+     * @private
+     */
+    this.ws = new WebSocketManager(this);
+
+    /**
+     * The Data Resolver of the Client
+     * @type {ClientDataResolver}
+     * @private
+     */
+    this.resolver = new ClientDataResolver(this);
+
+    /**
+     * The Action Manager of the Client
+     * @type {ActionsManager}
+     * @private
+     */
+    this.actions = new ActionsManager(this);
+
+    /**
+     * The Voice Manager of the Client (`null` in browsers)
+     * @type {?ClientVoiceManager}
+     * @private
+     */
+    this.voice = !this.browser ? new ClientVoiceManager(this) : null;
+
+    /**
+     * The shard helpers for the client (only if the process was spawned as a child, such as from a ShardingManager)
+     * @type {?ShardClientUtil}
+     */
+    this.shard = process.send ? ShardClientUtil.singleton(this) : null;
+
+    /**
+     * A collection of the Client's stored users
+     * @type {Collection&lt;string, User&gt;}
+     */
+    this.users = new Collection();
+
+    /**
+     * A collection of the Client's stored guilds
+     * @type {Collection&lt;string, Guild&gt;}
+     */
+    this.guilds = new Collection();
+
+    /**
+     * A collection of the Client's stored channels
+     * @type {Collection&lt;string, Channel&gt;}
+     */
+    this.channels = new Collection();
+
+    /**
+     * A collection of presences for friends of the logged in user.
+     * &lt;warn&gt;This is only filled when using a user account.&lt;/warn&gt;
+     * @type {Collection&lt;string, Presence&gt;}
+     */
+    this.presences = new Collection();
+
+    if (!this.token &amp;&amp; 'CLIENT_TOKEN' in process.env) {
+      /**
+       * The authorization token for the logged in user/bot.
+       * @type {?string}
+       */
+      this.token = process.env.CLIENT_TOKEN;
+    } else {
+      this.token = null;
+    }
+
+    /**
+     * The ClientUser representing the logged in Client
+     * @type {?ClientUser}
+     */
+    this.user = null;
+
+    /**
+     * The date at which the Client was regarded as being in the `READY` state.
+     * @type {?Date}
+     */
+    this.readyAt = null;
+
+    /**
+     * The previous heartbeat pings of the websocket (most recent first, limited to three elements)
+     * @type {number[]}
+     */
+    this.pings = [];
+
+    this._pingTimestamp = 0;
+    this._timeouts = new Set();
+    this._intervals = new Set();
+
+    if (this.options.messageSweepInterval &gt; 0) {
+      this.setInterval(this.sweepMessages.bind(this), this.options.messageSweepInterval * 1000);
+    }
+  }
+
+  /**
+   * The status for the logged in Client.
+   * @type {?number}
+   * @readonly
+   */
+  get status() {
+    return this.ws.status;
+  }
+
+  /**
+   * The uptime for the logged in Client.
+   * @type {?number}
+   * @readonly
+   */
+  get uptime() {
+    return this.readyAt ? Date.now() - this.readyAt : null;
+  }
+
+  /**
+   * The average heartbeat ping of the websocket
+   * @type {number}
+   * @readonly
+   */
+  get ping() {
+    return this.pings.reduce((prev, p) =&gt; prev + p, 0) / this.pings.length;
+  }
+
+  /**
+   * Returns a collection, mapping guild ID to voice ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Optional packages
+- [uws](https://www.npmjs.com/package/uws) for much a much faster WebSocket connection (`npm install uws --save`)
+- [erlpack](https://github.com/hammerandchisel/erlpack) for significantly faster WebSocket data (de)serialisation (`npm install
+hammerandchisel/erlpack --save`)
+
+## Example Usage
+```js
+const Discord = require('discord.js');
+const client = new Discord.<span class="apidocCodeKeywordSpan">Client</span>();
+
+client.on('ready', () =&gt; {
+console.log('I am ready!');
+});
+
+client.on('message', message =&gt; {
+if (message.content === 'ping') {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.ClientOAuth2Application" id="apidoc.element.discord.js.ClientOAuth2Application">
+        function <span class="apidocSignatureSpan">discord.js.</span>ClientOAuth2Application
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ClientOAuth2Application extends OAuth2Application {
+  setup(data) {
+    super.setup(data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * The app's flags
+     * @type {number}
+     */
+</span>    this.flags = data.flags;
+
+    /**
+     * The app's owner
+     * @type {User}
+     */
+    this.owner = new User(this.client, data.owner);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.ClientUser" id="apidoc.element.discord.js.ClientUser">
+        function <span class="apidocSignatureSpan">discord.js.</span>ClientUser
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ClientUser extends User {
+  setup(data) {
+    super.setup(data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * Whether or not this account has been verified
+     * @type {boolean}
+     */
+</span>    this.verified = data.verified;
+
+    /**
+     * The email of this account
+     * @type {string}
+     */
+    this.email = data.email;
+    this.localPresence = {};
+    this._typing = new Map();
+
+    /**
+     * A Collection of friends for the logged in user.
+     * &lt;warn&gt;This is only filled when using a user account.&lt;/warn&gt;
+     * @type {Collection&lt;string, User&gt;}
+     */
+    this.friends = new Collection();
+
+    /**
+     * A Collection of blocked users for the logged in user.
+     * &lt;warn&gt;This is only filled when using a user account.&lt;/warn&gt;
+     * @type {Collection&lt;string, User&gt;}
+     */
+    this.blocked = new Collection();
+
+    /**
+     * A Collection of notes for the logged in user.
+     * &lt;warn&gt;This is only filled when using a user account.&lt;/warn&gt;
+     * @type {Collection&lt;string, string&gt;}
+     */
+    this.notes = new Collection();
+  }
+
+  edit(data) {
+    return this.client.rest.methods.updateCurrentUser(data);
+  }
+
+  /**
+   * Set the username of the logged in Client.
+   * &lt;info&gt;Changing usernames in Discord is heavily rate limited, with only 2 requests
+   * every hour. Use this sparingly!&lt;/info&gt;
+   * @param {string} username The new username
+   * @param {string} [password] Current password (only for user accounts)
+   * @returns {Promise&lt;ClientUser&gt;}
+   * @example
+   * // set username
+   * client.user.setUsername('discordjs')
+   *  .then(user =&gt; console.log(`My new username is ${user.username}`))
+   *  .catch(console.error);
+   */
+  setUsername(username, password) {
+    return this.client.rest.methods.updateCurrentUser({ username }, password);
+  }
+
+  /**
+   * Changes the email for the client user's account.
+   * &lt;warn&gt;This is only available when using a user account.&lt;/warn&gt;
+   * @param {string} email New email to change to
+   * @param {string} password Current password
+   * @returns {Promise&lt;ClientUser&gt;}
+   * @example
+   * // set email
+   * client.user.setEmail('bob@gmail.com', 'some amazing password 123')
+   *  .then(user =&gt; console.log(`My new email is ${user.email}`))
+   *  .catch(console.error);
+   */
+  setEmail(email, password) {
+    return this.client.rest.methods.updateCurrentUser({ email }, password);
+  }
+
+  /**
+   * Changes the password for the client user's account.
+   * &lt;warn&gt;This is only available when using a user account.&lt;/warn&gt;
+   * @param {string} newPassword New password to change to
+   * @param {string} oldPassword Current password
+   * @returns {Promise&lt;ClientUser&gt;}
+   * @example
+   * // set password
+   * client.user.setPassword('some new amazing password 456', 'some amazing password 123')
+   *  .then(user =&gt; console.log('New password set!'))
+   *  .catch(console.error);
+   */
+  setPassword(newPassword, oldPassword) {
+    return this.client.rest.methods.updateCurrentUser({ password: newPassword }, oldPassword);
+  }
+
+  /**
+   * Set the avatar of the logged in Client.
+   * @param {BufferResolvable|Base64Resolvable} avatar The new avatar
+   * @returns {Promise&lt;ClientUser&gt;}
+   * @example
+   * // set avatar
+   * client.user.setAvatar('./avatar.png')
+   *  .then(user =&gt; console.log(`New avatar set!`))
+   *  .catch(console.error);
+   */
+  setAvatar(avatar) {
+    if (avatar.startsWith('data:')) {
+      return this.client.rest.methods.updateCurrentUser({ avatar });
+    } else {
+      return this.client.resolver.resolveBuffer(avatar).then(data =&gt;
+        this.client.rest.methods.updateCurrentUser({ avatar: data })
+      );
+    }
+  }
+
+  /**
+   * Data resembling a raw Discord presence
+   * @typedef {Object} PresenceData
+   * @property {PresenceStatus} [status] Status of the user
+   * @property {boolean} [afk] Whether the user is AFK
+   * @property {Object} [game] Game the user is playing
+   * @property {string} [game.name] Name of the game
+   * @property {string} [game.url] Twitch stream URL
+   */
+
+  /**
+   * Sets the full presence of the client user.
+   * @param {PresenceData} data Data for the presence
+   * @returns {Promise&lt;ClientUser&gt;}
+   */
+  se ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Collection" id="apidoc.element.discord.js.Collection">
+        function <span class="apidocSignatureSpan">discord.js.</span>Collection
+        <span class="apidocSignatureSpan">(iterable)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Collection extends Map {
+  constructor(iterable) {
+    super(iterable);
+
+<span class="apidocCodeCommentSpan">    /**
+     * Cached array for the `array()` method - will be reset to `null` whenever `set()` or `delete()` are called.
+     * @type {?Array}
+     * @private
+     */
+</span>    this._array = null;
+
+    /**
+     * Cached array for the `keyArray()` method - will be reset to `null` whenever `set()` or `delete()` are called.
+     * @type {?Array}
+     * @private
+     */
+    this._keyArray = null;
+  }
+
+  set(key, val) {
+    this._array = null;
+    this._keyArray = null;
+    return super.set(key, val);
+  }
+
+  delete(key) {
+    this._array = null;
+    this._keyArray = null;
+    return super.delete(key);
+  }
+
+  /**
+   * Creates an ordered array of the values of this collection, and caches it internally. The array will only be
+   * reconstructed if an item is added to or removed from the collection, or if you change the length of the array
+   * itself. If you don't want this caching behaviour, use `Array.from(collection.values())` instead.
+   * @returns {Array}
+   */
+  array() {
+    if (!this._array || this._array.length !== this.size) this._array = Array.from(this.values());
+    return this._array;
+  }
+
+  /**
+   * Creates an ordered array of the keys of this collection, and caches it internally. The array will only be
+   * reconstructed if an item is added to or removed from the collection, or if you change the length of the array
+   * itself. If you don't want this caching behaviour, use `Array.from(collection.keys())` instead.
+   * @returns {Array}
+   */
+  keyArray() {
+    if (!this._keyArray || this._keyArray.length !== this.size) this._keyArray = Array.from(this.keys());
+    return this._keyArray;
+  }
+
+  /**
+   * Obtains the first item in this collection.
+   * @returns {*}
+   */
+  first() {
+    return this.values().next().value;
+  }
+
+  /**
+   * Obtains the first key in this collection.
+   * @returns {*}
+   */
+  firstKey() {
+    return this.keys().next().value;
+  }
+
+  /**
+   * Obtains the last item in this collection. This relies on the `array()` method, and thus the caching mechanism
+   * applies here as well.
+   * @returns {*}
+   */
+  last() {
+    const arr = this.array();
+    return arr[arr.length - 1];
+  }
+
+  /**
+   * Obtains the last key in this collection. This relies on the `keyArray()` method, and thus the caching mechanism
+   * applies here as well.
+   * @returns {*}
+   */
+  lastKey() {
+    const arr = this.keyArray();
+    return arr[arr.length - 1];
+  }
+
+  /**
+   * Obtains a random item from this collection. This relies on the `array()` method, and thus the caching mechanism
+   * applies here as well.
+   * @returns {*}
+   */
+  random() {
+    const arr = this.array();
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  /**
+   * Obtains a random key from this collection. This relies on the `keyArray()` method, and thus the caching mechanism
+   * applies here as well.
+   * @returns {*}
+   */
+  randomKey() {
+    const arr = this.keyArray();
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  /**
+   * Searches for all items where their specified property's value is identical to the given value
+   * (`item[prop] === value`).
+   * @param {string} prop The property to test against
+   * @param {*} value The expected value
+   * @returns {Array}
+   * @example
+   * collection.findAll('username', 'Bob');
+   */
+  findAll(prop, value) {
+    if (typeof prop !== 'string') throw new TypeError('Key must be a string.');
+    if (typeof value === 'undefined') throw new Error('Value must be specified.');
+    const results = [];
+    for (const item of this.values()) {
+      if (item[prop] === value) results.push(item);
+    }
+    return results;
+  }
+
+  /**
+   * Searches for a single item where its specified property's value is identical to the given value
+   * (`item[prop] === value`), or the given function returns a truthy value. In the latter case, this is identical to
+   * [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).
+   * &lt;warn&gt;Do not use this to obtain an item by its ID. Instead, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.DMChannel" id="apidoc.element.discord.js.DMChannel">
+        function <span class="apidocSignatureSpan">discord.js.</span>DMChannel
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class DMChannel extends Channel {
+  constructor(client, data) {
+    super(client, data);
+    this.type = 'dm';
+    this.messages = new Collection();
+    this._typing = new Map();
+  }
+
+  setup(data) {
+    super.setup(data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * The recipient on the other end of the DM
+     * @type {User}
+     */
+</span>    this.recipient = this.client.dataManager.newUser(data.recipients[0]);
+
+    this.lastMessageID = data.last_message_id;
+  }
+
+  /**
+   * When concatenated with a string, this automatically concatenates the recipient's mention instead of the
+   * DM channel object.
+   * @returns {string}
+   */
+  toString() {
+    return this.recipient.toString();
+  }
+
+  // These are here only for documentation purposes - they are implemented by TextBasedChannel
+  send() { return; }
+  sendMessage() { return; }
+  sendEmbed() { return; }
+  sendFile() { return; }
+  sendCode() { return; }
+  fetchMessage() { return; }
+  fetchMessages() { return; }
+  fetchPinnedMessages() { return; }
+  startTyping() { return; }
+  stopTyping() { return; }
+  get typing() { return; }
+  get typingCount() { return; }
+  createCollector() { return; }
+  awaitMessages() { return; }
+  bulkDelete() { return; }
+  _cacheMessage() { return; }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Emoji" id="apidoc.element.discord.js.Emoji">
+        function <span class="apidocSignatureSpan">discord.js.</span>Emoji
+        <span class="apidocSignatureSpan">(guild, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Emoji {
+  constructor(guild, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that instantiated this object
+     * @name Emoji#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: guild.client });
+
+    /**
+     * The guild this emoji is part of
+     * @type {Guild}
+     */
+    this.guild = guild;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of the emoji
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The name of the emoji
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * Whether or not this emoji requires colons surrounding it
+     * @type {boolean}
+     */
+    this.requiresColons = data.require_colons;
+
+    /**
+     * Whether this emoji is managed by an external service
+     * @type {boolean}
+     */
+    this.managed = data.managed;
+
+    this._roles = data.roles;
+  }
+
+  /**
+   * The timestamp the emoji was created at
+   * @type {number}
+   * @readonly
+   */
+  get createdTimestamp() {
+    return (this.id / 4194304) + 1420070400000;
+  }
+
+  /**
+   * The time the emoji was created
+   * @type {Date}
+   * @readonly
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * A collection of roles this emoji is active for (empty if all), mapped by role ID.
+   * @type {Collection&lt;string, Role&gt;}
+   * @readonly
+   */
+  get roles() {
+    const roles = new Collection();
+    for (const role of this._roles) {
+      if (this.guild.roles.has(role)) roles.set(role, this.guild.roles.get(role));
+    }
+    return roles;
+  }
+
+  /**
+   * The URL to the emoji file
+   * @type {string}
+   * @readonly
+   */
+  get url() {
+    return Constants.Endpoints.emoji(this.id);
+  }
+
+  /**
+   * When concatenated with a string, this automatically returns the emoji mention rather than the object.
+   * @returns {string}
+   * @example
+   * // send an emoji:
+   * const emoji = guild.emojis.first();
+   * msg.reply(`Hello! ${emoji}`);
+   */
+  toString() {
+    return this.requiresColons ? `&lt;:${this.name}:${this.id}&gt;` : this.name;
+  }
+
+  /**
+   * Whether this emoji is the same as another one
+   * @param {Emoji|Object} other the emoji to compare it to
+   * @returns {boolean} whether the emoji is equal to the given emoji or not
+   */
+  equals(other) {
+    if (other instanceof Emoji) {
+      return (
+        other.id === this.id &amp;&amp;
+        other.name === this.name &amp;&amp;
+        other.managed === this.managed &amp;&amp;
+        other.requiresColons === this.requiresColons
+      );
+    } else {
+      return (
+        other.id === this.id &amp;&amp;
+        other.name === this.name
+      );
+    }
+  }
+
+  /**
+   * The identifier of this emoji, used for message reactions
+   * @readonly
+   * @type {string}
+   */
+  get identifier() {
+    if (this.id) {
+      return `${this.name}:${this.id}`;
+    }
+    return encodeURIComponent(this.name);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.EvaluatedPermissions" id="apidoc.element.discord.js.EvaluatedPermissions">
+        function <span class="apidocSignatureSpan">discord.js.</span>EvaluatedPermissions
+        <span class="apidocSignatureSpan">(member, raw)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class EvaluatedPermissions {
+  constructor(member, raw) {
+<span class="apidocCodeCommentSpan">    /**
+     * The member this permissions refer to
+     * @type {GuildMember}
+     */
+</span>    this.member = member;
+
+    /**
+     * A number representing the packed permissions
+     * @type {number}
+     */
+    this.raw = raw;
+  }
+
+  /**
+   * Get an object mapping permission name, e.g. `READ_MESSAGES` to a boolean - whether the user
+   * can perform this or not.
+   * @returns {Object&lt;string, boolean&gt;}
+   */
+  serialize() {
+    const serializedPermissions = {};
+    for (const permissionName in Constants.PermissionFlags) {
+      serializedPermissions[permissionName] = this.hasPermission(permissionName);
+    }
+    return serializedPermissions;
+  }
+
+  /**
+   * Checks whether the user has a certain permission, e.g. `READ_MESSAGES`.
+   * @param {PermissionResolvable} permission The permission to check for
+   * @param {boolean} [explicit=false] Whether to require the user to explicitly have the exact permission
+   * @returns {boolean}
+   */
+  hasPermission(permission, explicit = false) {
+    permission = this.member.client.resolver.resolvePermission(permission);
+    if (!explicit &amp;&amp; (this.raw &amp; Constants.PermissionFlags.ADMINISTRATOR) &gt; 0) return true;
+    return (this.raw &amp; permission) &gt; 0;
+  }
+
+  /**
+   * Checks whether the user has all specified permissions.
+   * @param {PermissionResolvable[]} permissions The permissions to check for
+   * @param {boolean} [explicit=false] Whether to require the user to explicitly have the exact permissions
+   * @returns {boolean}
+   */
+  hasPermissions(permissions, explicit = false) {
+    return permissions.every(p =&gt; this.hasPermission(p, explicit));
+  }
+
+  /**
+   * Checks whether the user has all specified permissions, and lists any missing permissions.
+   * @param {PermissionResolvable[]} permissions The permissions to check for
+   * @param {boolean} [explicit=false] Whether to require the user to explicitly have the exact permissions
+   * @returns {PermissionResolvable[]}
+   */
+  missingPermissions(permissions, explicit = false) {
+    return permissions.filter(p =&gt; !this.hasPermission(p, explicit));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Game" id="apidoc.element.discord.js.Game">
+        function <span class="apidocSignatureSpan">discord.js.</span>Game
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Game {
+  constructor(data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The name of the game being played
+     * @type {string}
+     */
+</span>    this.name = data.name;
+
+    /**
+     * The type of the game status
+     * @type {number}
+     */
+    this.type = data.type;
+
+    /**
+     * If the game is being streamed, a link to the stream
+     * @type {?string}
+     */
+    this.url = data.url || null;
+  }
+
+  /**
+   * Whether or not the game is being streamed
+   * @type {boolean}
+   * @readonly
+   */
+  get streaming() {
+    return this.type === 1;
+  }
+
+  /**
+   * Whether this game is equal to another game
+   * @param {Game} game Game to compare with
+   * @returns {boolean}
+   */
+  equals(game) {
+    return this === game || (
+      game &amp;&amp;
+      this.name === game.name &amp;&amp;
+      this.type === game.type &amp;&amp;
+      this.url === game.url
+    );
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.GroupDMChannel" id="apidoc.element.discord.js.GroupDMChannel">
+        function <span class="apidocSignatureSpan">discord.js.</span>GroupDMChannel
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class GroupDMChannel extends Channel {
+  constructor(client, data) {
+    super(client, data);
+    this.type = 'group';
+    this.messages = new Collection();
+    this._typing = new Map();
+  }
+
+  setup(data) {
+    super.setup(data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * The name of this Group DM, can be null if one isn't set.
+     * @type {string}
+     */
+</span>    this.name = data.name;
+
+    /**
+     * A hash of the Group DM icon.
+     * @type {string}
+     */
+    this.icon = data.icon;
+
+    /**
+     * The user ID of this Group DM's owner.
+     * @type {string}
+     */
+    this.ownerID = data.owner_id;
+
+    if (!this.recipients) {
+      /**
+       * A collection of the recipients of this DM, mapped by their ID.
+       * @type {Collection&lt;string, User&gt;}
+       */
+      this.recipients = new Collection();
+    }
+
+    if (data.recipients) {
+      for (const recipient of data.recipients) {
+        const user = this.client.dataManager.newUser(recipient);
+        this.recipients.set(user.id, user);
+      }
+    }
+
+    this.lastMessageID = data.last_message_id;
+  }
+
+  /**
+   * The owner of this Group DM.
+   * @type {User}
+   * @readonly
+   */
+  get owner() {
+    return this.client.users.get(this.ownerID);
+  }
+
+  /**
+   * Whether this channel equals another channel. It compares all properties, so for most operations
+   * it is advisable to just compare `channel.id === channel2.id` as it is much faster and is often
+   * what most users need.
+   * @param {GroupDMChannel} channel Channel to compare with
+   * @returns {boolean}
+   */
+  equals(channel) {
+    const equal = channel &amp;&amp;
+      this.id === channel.id &amp;&amp;
+      this.name === channel.name &amp;&amp;
+      this.icon === channel.icon &amp;&amp;
+      this.ownerID === channel.ownerID;
+
+    if (equal) {
+      return this.recipients.equals(channel.recipients);
+    }
+
+    return equal;
+  }
+
+  /**
+   * When concatenated with a string, this automatically concatenates the channel's name instead of the Channel object.
+   * @returns {string}
+   * @example
+   * // logs: Hello from My Group DM!
+   * console.log(`Hello from ${channel}!`);
+   * @example
+   * // logs: Hello from My Group DM!
+   * console.log(`Hello from ' + channel + '!');
+   */
+  toString() {
+    return this.name;
+  }
+
+  // These are here only for documentation purposes - they are implemented by TextBasedChannel
+  send() { return; }
+  sendMessage() { return; }
+  sendEmbed() { return; }
+  sendFile() { return; }
+  sendCode() { return; }
+  fetchMessage() { return; }
+  fetchMessages() { return; }
+  fetchPinnedMessages() { return; }
+  startTyping() { return; }
+  stopTyping() { return; }
+  get typing() { return; }
+  get typingCount() { return; }
+  createCollector() { return; }
+  awaitMessages() { return; }
+  bulkDelete() { return; }
+  _cacheMessage() { return; }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Guild" id="apidoc.element.discord.js.Guild">
+        function <span class="apidocSignatureSpan">discord.js.</span>Guild
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Guild {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that created the instance of the the Guild.
+     * @name Guild#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    /**
+     * A collection of members that are in this guild. The key is the member's ID, the value is the member.
+     * @type {Collection&lt;string, GuildMember&gt;}
+     */
+    this.members = new Collection();
+
+    /**
+     * A collection of channels that are in this guild. The key is the channel's ID, the value is the channel.
+     * @type {Collection&lt;string, GuildChannel&gt;}
+     */
+    this.channels = new Collection();
+
+    /**
+     * A collection of roles that are in this guild. The key is the role's ID, the value is the role.
+     * @type {Collection&lt;string, Role&gt;}
+     */
+    this.roles = new Collection();
+
+    /**
+     * A collection of presences in this guild
+     * @type {Collection&lt;string, Presence&gt;}
+     */
+    this.presences = new Collection();
+
+    if (!data) return;
+    if (data.unavailable) {
+      /**
+       * Whether the guild is available to access. If it is not available, it indicates a server outage.
+       * @type {boolean}
+       */
+      this.available = false;
+
+      /**
+       * The Unique ID of the Guild, useful for comparisons.
+       * @type {string}
+       */
+      this.id = data.id;
+    } else {
+      this.available = true;
+      this.setup(data);
+    }
+  }
+
+  /**
+   * Sets up the Guild
+   * @param {*} data The raw data of the guild
+   * @private
+   */
+  setup(data) {
+    /**
+     * The name of the guild
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The hash of the guild icon, or null if there is no icon.
+     * @type {?string}
+     */
+    this.icon = data.icon;
+
+    /**
+     * The hash of the guild splash image, or null if no splash (VIP only)
+     * @type {?string}
+     */
+    this.splash = data.splash;
+
+    /**
+     * The region the guild is located in
+     * @type {string}
+     */
+    this.region = data.region;
+
+    /**
+     * The full amount of members in this guild as of `READY`
+     * @type {number}
+     */
+    this.memberCount = data.member_count || this.memberCount;
+
+    /**
+     * Whether the guild is "large" (has more than 250 members)
+     * @type {boolean}
+     */
+    this.large = data.large || this.large;
+
+    /**
+     * An array of guild features.
+     * @type {Object[]}
+     */
+    this.features = data.features;
+
+    /**
+     * The ID of the application that created this guild (if applicable)
+     * @type {?string}
+     */
+    this.applicationID = data.application_id;
+
+    /**
+     * A collection of emojis that are in this guild. The key is the emoji's ID, the value is the emoji.
+     * @type {Collection&lt;string, Emoji&gt;}
+     */
+    this.emojis = new Collection();
+    for (const emoji of data.emojis) this.emojis.set(emoji.id, new Emoji(this, emoji));
+
+    /**
+     * The time in seconds before a user is counted as "away from keyboard".
+     * @type {?number}
+     */
+    this.afkTimeout = data.afk_timeout;
+
+    /**
+     * The ID of the voice channel where AFK members are moved.
+     * @type {?string}
+     */
+    this.afkChannelID = data.afk_channel_id;
+
+    /**
+     * Whether embedded images are enabled on this guild.
+     * @type {boolean}
+     */
+    this.embedEnabled = data.embed_enabled;
+
+    /**
+     * The verification level of the guild.
+     * @type {number}
+     */
+    this.verificationLevel = data.verification_level;
+
+    /**
+     * The timestamp the client user joined the guild at
+     * @type {number}
+     */
+    this.joinedTimestamp = data.joined_at ? new Date(data.joined_at).getTime() : this.joinedTimestamp;
+
+    this.id = data.id;
+    this.available = !data.unavailable;
+    this.features = data.features || this.features || [];
+
+    if (data.members) {
+      this.members.clear();
+      for (const guildUser of data.members) this._addMember(guildUser, false);
+    }
+
+    if (data.owner_id) {
+      /**
+       * The user ID of this guild's owner.
+       * @type {string}
+       */
+      this.ownerID = da ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.GuildChannel" id="apidoc.element.discord.js.GuildChannel">
+        function <span class="apidocSignatureSpan">discord.js.</span>GuildChannel
+        <span class="apidocSignatureSpan">(guild, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class GuildChannel extends Channel {
+  constructor(guild, data) {
+    super(guild.client, data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * The guild the channel is in
+     * @type {Guild}
+     */
+</span>    this.guild = guild;
+  }
+
+  setup(data) {
+    super.setup(data);
+
+    /**
+     * The name of the guild channel
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The position of the channel in the list.
+     * @type {number}
+     */
+    this.position = data.position;
+
+    /**
+     * A map of permission overwrites in this channel for roles and users.
+     * @type {Collection&lt;string, PermissionOverwrites&gt;}
+     */
+    this.permissionOverwrites = new Collection();
+    if (data.permission_overwrites) {
+      for (const overwrite of data.permission_overwrites) {
+        this.permissionOverwrites.set(overwrite.id, new PermissionOverwrites(this, overwrite));
+      }
+    }
+  }
+
+  /**
+   * Gets the overall set of permissions for a user in this channel, taking into account roles and permission
+   * overwrites.
+   * @param {GuildMemberResolvable} member The user that you want to obtain the overall permissions for
+   * @returns {?EvaluatedPermissions}
+   */
+  permissionsFor(member) {
+    member = this.client.resolver.resolveGuildMember(this.guild, member);
+    if (!member) return null;
+    if (member.id === this.guild.ownerID) return new EvaluatedPermissions(member, Constants.ALL_PERMISSIONS);
+
+    let permissions = 0;
+
+    const roles = member.roles;
+    for (const role of roles.values()) permissions |= role.permissions;
+
+    const overwrites = this.overwritesFor(member, true, roles);
+    for (const overwrite of overwrites.role.concat(overwrites.member)) {
+      permissions &amp;= ~overwrite.deny;
+      permissions |= overwrite.allow;
+    }
+
+    const admin = Boolean(permissions &amp; Constants.PermissionFlags.ADMINISTRATOR);
+    if (admin) permissions = Constants.ALL_PERMISSIONS;
+
+    return new EvaluatedPermissions(member, permissions);
+  }
+
+  overwritesFor(member, verified = false, roles = null) {
+    if (!verified) member = this.client.resolver.resolveGuildMember(this.guild, member);
+    if (!member) return [];
+
+    roles = roles || member.roles;
+    const roleOverwrites = [];
+    const memberOverwrites = [];
+
+    for (const overwrite of this.permissionOverwrites.values()) {
+      if (overwrite.id === member.id) {
+        memberOverwrites.push(overwrite);
+      } else if (roles.has(overwrite.id)) {
+        roleOverwrites.push(overwrite);
+      }
+    }
+
+    return {
+      role: roleOverwrites,
+      member: memberOverwrites,
+    };
+  }
+
+  /**
+   * An object mapping permission flags to `true` (enabled) or `false` (disabled)
+   * ```js
+   * {
+   *  'SEND_MESSAGES': true,
+   *  'ATTACH_FILES': false,
+   * }
+   * ```
+   * @typedef {Object} PermissionOverwriteOptions
+   */
+
+  /**
+   * Overwrites the permissions for a user or role in this channel.
+   * @param {RoleResolvable|UserResolvable} userOrRole The user or role to update
+   * @param {PermissionOverwriteOptions} options The configuration for the update
+   * @returns {Promise}
+   * @example
+   * // overwrite permissions for a message author
+   * message.channel.overwritePermissions(message.author, {
+   *  SEND_MESSAGES: false
+   * })
+   * .then(() =&gt; console.log('Done!'))
+   * .catch(console.error);
+   */
+  overwritePermissions(userOrRole, options) {
+    const payload = {
+      allow: 0,
+      deny: 0,
+    };
+
+    if (userOrRole instanceof Role) {
+      payload.type = 'role';
+    } else if (this.guild.roles.has(userOrRole)) {
+      userOrRole = this.guild.roles.get(userOrRole);
+      payload.type = 'role';
+    } else {
+      userOrRole = this.client.resolver.resolveUser(userOrRole);
+      payload.type = 'member';
+      if (!userOrRole) return Promise.reject(new TypeError('Supplied parameter was neither a User nor a Role.'));
+    }
+
+    payload.id = userOrRole.id;
+
+    const prevOverwrite = this.permissionOverwrites.get(userOrRole.id);
+
+    if (prevOverwrite) {
+      payload.allow = prevOverwrite.allow;
+      payload.deny = prevOverwrite.deny;
+    }
+
+    for (const perm in options) {
+      if (opt ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.GuildMember" id="apidoc.element.discord.js.GuildMember">
+        function <span class="apidocSignatureSpan">discord.js.</span>GuildMember
+        <span class="apidocSignatureSpan">(guild, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class GuildMember {
+  constructor(guild, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that instantiated this GuildMember
+     * @name GuildMember#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: guild.client });
+
+    /**
+     * The guild that this member is part of
+     * @type {Guild}
+     */
+    this.guild = guild;
+
+    /**
+     * The user that this guild member instance Represents
+     * @type {User}
+     */
+    this.user = {};
+
+    this._roles = [];
+    if (data) this.setup(data);
+
+    /**
+     * The ID of the last message sent by the member in their guild, if one was sent.
+     * @type {?string}
+     */
+    this.lastMessageID = null;
+  }
+
+  setup(data) {
+    /**
+     * Whether this member is deafened server-wide
+     * @type {boolean}
+     */
+    this.serverDeaf = data.deaf;
+
+    /**
+     * Whether this member is muted server-wide
+     * @type {boolean}
+     */
+    this.serverMute = data.mute;
+
+    /**
+     * Whether this member is self-muted
+     * @type {boolean}
+     */
+    this.selfMute = data.self_mute;
+
+    /**
+     * Whether this member is self-deafened
+     * @type {boolean}
+     */
+    this.selfDeaf = data.self_deaf;
+
+    /**
+     * The voice session ID of this member, if any
+     * @type {?string}
+     */
+    this.voiceSessionID = data.session_id;
+
+    /**
+     * The voice channel ID of this member, if any
+     * @type {?string}
+     */
+    this.voiceChannelID = data.channel_id;
+
+    /**
+     * Whether this member is speaking
+     * @type {boolean}
+     */
+    this.speaking = false;
+
+    /**
+     * The nickname of this guild member, if they have one
+     * @type {?string}
+     */
+    this.nickname = data.nick || null;
+
+    /**
+     * The timestamp the member joined the guild at
+     * @type {number}
+     */
+    this.joinedTimestamp = new Date(data.joined_at).getTime();
+
+    this.user = data.user;
+    this._roles = data.roles;
+  }
+
+  /**
+   * The time the member joined the guild
+   * @type {Date}
+   * @readonly
+   */
+  get joinedAt() {
+    return new Date(this.joinedTimestamp);
+  }
+
+  /**
+   * The presence of this guild member
+   * @type {Presence}
+   * @readonly
+   */
+  get presence() {
+    return this.frozenPresence || this.guild.presences.get(this.id) || new Presence();
+  }
+
+  /**
+   * A list of roles that are applied to this GuildMember, mapped by the role ID.
+   * @type {Collection&lt;string, Role&gt;}
+   * @readonly
+   */
+  get roles() {
+    const list = new Collection();
+    const everyoneRole = this.guild.roles.get(this.guild.id);
+
+    if (everyoneRole) list.set(everyoneRole.id, everyoneRole);
+
+    for (const roleID of this._roles) {
+      const role = this.guild.roles.get(roleID);
+      if (role) list.set(role.id, role);
+    }
+
+    return list;
+  }
+
+  /**
+   * The role of the member with the highest position.
+   * @type {Role}
+   * @readonly
+   */
+  get highestRole() {
+    return this.roles.reduce((prev, role) =&gt; !prev || role.comparePositionTo(prev) &gt; 0 ? role : prev);
+  }
+
+  /**
+   * Whether this member is muted in any way
+   * @type {boolean}
+   * @readonly
+   */
+  get mute() {
+    return this.selfMute || this.serverMute;
+  }
+
+  /**
+   * Whether this member is deafened in any way
+   * @type {boolean}
+   * @readonly
+   */
+  get deaf() {
+    return this.selfDeaf || this.serverDeaf;
+  }
+
+  /**
+   * The voice channel this member is in, if any
+   * @type {?VoiceChannel}
+   * @readonly
+   */
+  get voiceChannel() {
+    return this.guild.channels.get(this.voiceChannelID);
+  }
+
+  /**
+   * The ID of this user
+   * @type {string}
+   * @readonly
+   */
+  get id() {
+    return this.user.id;
+  }
+
+  /**
+   * The nickname of the member, or their username if they don't have one
+   * @type {string}
+   * @readonly
+   */
+  get displayName() {
+    return this.nickname || this.user.username;
+  }
+
+  /**
+   * The overall set of permissions for the guild member, taking only roles into account
+   * @type {EvaluatedPermissions}
+   * @readonly
+   */
+  get permissions() {
+    if (this.user.id === this.guild.ownerID) return new EvaluatedPermissions(this, Constants.ALL_PERMISSIONS); ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Invite" id="apidoc.element.discord.js.Invite">
+        function <span class="apidocSignatureSpan">discord.js.</span>Invite
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Invite {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated the invite
+     * @name Invite#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The guild the invite is for. If this guild is already known, this will be a Guild object. If the guild is
+     * unknown, this will be a PartialGuild object.
+     * @type {Guild|PartialGuild}
+     */
+    this.guild = this.client.guilds.get(data.guild.id) || new PartialGuild(this.client, data.guild);
+
+    /**
+     * The code for this invite
+     * @type {string}
+     */
+    this.code = data.code;
+
+    /**
+     * Whether or not this invite is temporary
+     * @type {boolean}
+     */
+    this.temporary = data.temporary;
+
+    /**
+     * The maximum age of the invite, in seconds
+     * @type {?number}
+     */
+    this.maxAge = data.max_age;
+
+    /**
+     * How many times this invite has been used
+     * @type {number}
+     */
+    this.uses = data.uses;
+
+    /**
+     * The maximum uses of this invite
+     * @type {number}
+     */
+    this.maxUses = data.max_uses;
+
+    if (data.inviter) {
+      /**
+       * The user who created this invite
+       * @type {User}
+       */
+      this.inviter = this.client.dataManager.newUser(data.inviter);
+    }
+
+    /**
+     * The channel the invite is for. If this channel is already known, this will be a GuildChannel object.
+     * If the channel is unknown, this will be a PartialGuildChannel object.
+     * @type {GuildChannel|PartialGuildChannel}
+     */
+    this.channel = this.client.channels.get(data.channel.id) || new PartialGuildChannel(this.client, data.channel);
+
+    /**
+     * The timestamp the invite was created at
+     * @type {number}
+     */
+    this.createdTimestamp = new Date(data.created_at).getTime();
+  }
+
+  /**
+   * The time the invite was created
+   * @type {Date}
+   * @readonly
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * The timestamp the invite will expire at
+   * @type {number}
+   * @readonly
+   */
+  get expiresTimestamp() {
+    return this.createdTimestamp + (this.maxAge * 1000);
+  }
+
+  /**
+   * The time the invite will expire
+   * @type {Date}
+   * @readonly
+   */
+  get expiresAt() {
+    return new Date(this.expiresTimestamp);
+  }
+
+  /**
+   * The URL to the invite
+   * @type {string}
+   * @readonly
+   */
+  get url() {
+    return Constants.Endpoints.inviteLink(this.code);
+  }
+
+  /**
+   * Deletes this invite
+   * @returns {Promise&lt;Invite&gt;}
+   */
+  delete() {
+    return this.client.rest.methods.deleteInvite(this);
+  }
+
+  /**
+   * When concatenated with a string, this automatically concatenates the invite's URL instead of the object.
+   * @returns {string}
+   * @example
+   * // logs: Invite: https://discord.gg/A1b2C3
+   * console.log(`Invite: ${invite}`);
+   */
+  toString() {
+    return this.url;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Message" id="apidoc.element.discord.js.Message">
+        function <span class="apidocSignatureSpan">discord.js.</span>Message
+        <span class="apidocSignatureSpan">(channel, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Message {
+  constructor(channel, data, client) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that instantiated the Message
+     * @name Message#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    /**
+     * The channel that the message was sent in
+     * @type {TextChannel|DMChannel|GroupDMChannel}
+     */
+    this.channel = channel;
+
+    if (data) this.setup(data);
+  }
+
+  setup(data) { // eslint-disable-line complexity
+    /**
+     * The ID of the message (unique in the channel it was sent)
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The type of the message
+     * @type {string}
+     */
+    this.type = Constants.MessageTypes[data.type];
+
+    /**
+     * The content of the message
+     * @type {string}
+     */
+    this.content = data.content;
+
+    /**
+     * The author of the message
+     * @type {User}
+     */
+    this.author = this.client.dataManager.newUser(data.author);
+
+    /**
+     * Represents the author of the message as a guild member. Only available if the message comes from a guild
+     * where the author is still a member.
+     * @type {GuildMember}
+     */
+    this.member = this.guild ? this.guild.member(this.author) || null : null;
+
+    /**
+     * Whether or not this message is pinned
+     * @type {boolean}
+     */
+    this.pinned = data.pinned;
+
+    /**
+     * Whether or not the message was Text-To-Speech
+     * @type {boolean}
+     */
+    this.tts = data.tts;
+
+    /**
+     * A random number used for checking message delivery
+     * @type {string}
+     */
+    this.nonce = data.nonce;
+
+    /**
+     * Whether or not this message was sent by Discord, not actually a user (e.g. pin notifications)
+     * @type {boolean}
+     */
+    this.system = data.type === 6;
+
+    /**
+     * A list of embeds in the message - e.g. YouTube Player
+     * @type {MessageEmbed[]}
+     */
+    this.embeds = data.embeds.map(e =&gt; new Embed(this, e));
+
+    /**
+     * A collection of attachments in the message - e.g. Pictures - mapped by their ID.
+     * @type {Collection&lt;string, MessageAttachment&gt;}
+     */
+    this.attachments = new Collection();
+    for (const attachment of data.attachments) this.attachments.set(attachment.id, new Attachment(this, attachment));
+
+    /**
+     * The timestamp the message was sent at
+     * @type {number}
+     */
+    this.createdTimestamp = new Date(data.timestamp).getTime();
+
+    /**
+     * The timestamp the message was last edited at (if applicable)
+     * @type {?number}
+     */
+    this.editedTimestamp = data.edited_timestamp ? new Date(data.edited_timestamp).getTime() : null;
+
+    /**
+     * An object containing a further users, roles or channels collections
+     * @type {Object}
+     * @property {Collection&lt;string, User&gt;} mentions.users Mentioned users, maps their ID to the user object.
+     * @property {Collection&lt;string, Role&gt;} mentions.roles Mentioned roles, maps their ID to the role object.
+     * @property {Collection&lt;string, GuildChannel&gt;} mentions.channels Mentioned channels,
+     * maps their ID to the channel object.
+     * @property {boolean} mentions.everyone Whether or not @everyone was mentioned.
+     */
+    this.mentions = {
+      users: new Collection(),
+      roles: new Collection(),
+      channels: new Collection(),
+      everyone: data.mention_everyone,
+    };
+
+    for (const mention of data.mentions) {
+      let user = this.client.users.get(mention.id);
+      if (user) {
+        this.mentions.users.set(user.id, user);
+      } else {
+        user = this.client.dataManager.newUser(mention);
+        this.mentions.users.set(user.id, user);
+      }
+    }
+
+    if (data.mention_roles) {
+      for (const mention of data.mention_roles) {
+        const role = this.channel.guild.roles.get(mention);
+        if (role) this.mentions.roles.set(role.id, role);
+      }
+    }
+
+    if (this.channel.guild) {
+      const channMentionsRaw = data.content.match(/&lt;#([0-9]{14,20})&gt;/g) || [];
+      for (const raw of channMentionsRaw) {
+        const chan = this.channel.guild.channels.get(raw.match(/([0-9]{14,20})/g)[0]); ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageAttachment" id="apidoc.element.discord.js.MessageAttachment">
+        function <span class="apidocSignatureSpan">discord.js.</span>MessageAttachment
+        <span class="apidocSignatureSpan">(message, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageAttachment {
+  constructor(message, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that instantiated this MessageAttachment.
+     * @name MessageAttachment#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: message.client });
+
+    /**
+     * The message this attachment is part of.
+     * @type {Message}
+     */
+    this.message = message;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of this attachment
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The file name of this attachment
+     * @type {string}
+     */
+    this.filename = data.filename;
+
+    /**
+     * The size of this attachment in bytes
+     * @type {number}
+     */
+    this.filesize = data.size;
+
+    /**
+     * The URL to this attachment
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * The Proxy URL to this attachment
+     * @type {string}
+     */
+    this.proxyURL = data.proxy_url;
+
+    /**
+     * The height of this attachment (if an image)
+     * @type {?number}
+     */
+    this.height = data.height;
+
+    /**
+     * The width of this attachment (if an image)
+     * @type {?number}
+     */
+    this.width = data.width;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageCollector" id="apidoc.element.discord.js.MessageCollector">
+        function <span class="apidocSignatureSpan">discord.js.</span>MessageCollector
+        <span class="apidocSignatureSpan">(message, collector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageCollector extends EventEmitter {
+<span class="apidocCodeCommentSpan">  /**
+   * A function that takes a Message object and a MessageCollector and returns a boolean.
+   * ```js
+   * function(message, collector) {
+   *  if (message.content.includes('discord')) {
+   *    return true; // passed the filter test
+   *  }
+   *  return false; // failed the filter test
+   * }
+   * ```
+   * @typedef {Function} CollectorFilterFunction
+   */
+</span>
+  /**
+   * An object containing options used to configure a MessageCollector. All properties are optional.
+   * @typedef {Object} CollectorOptions
+   * @property {number} [time] Duration for the collector in milliseconds
+   * @property {number} [max] Maximum number of messages to handle
+   * @property {number} [maxMatches] Maximum number of successfully filtered messages to obtain
+   */
+
+  /**
+   * @param {Channel} channel The channel to collect messages in
+   * @param {CollectorFilterFunction} filter The filter function
+   * @param {CollectorOptions} [options] Options for the collector
+   */
+  constructor(channel, filter, options = {}) {
+    super();
+
+    /**
+     * The channel this collector is operating on
+     * @type {Channel}
+     */
+    this.channel = channel;
+
+    /**
+     * A function used to filter messages that the collector collects.
+     * @type {CollectorFilterFunction}
+     */
+    this.filter = filter;
+
+    /**
+     * Options for the collecor.
+     * @type {CollectorOptions}
+     */
+    this.options = options;
+
+    /**
+     * Whether this collector has stopped collecting messages.
+     * @type {boolean}
+     */
+    this.ended = false;
+
+    /**
+     * A collection of collected messages, mapped by message ID.
+     * @type {Collection&lt;string, Message&gt;}
+     */
+    this.collected = new Collection();
+
+    this.listener = message =&gt; this.verify(message);
+    this.channel.client.on('message', this.listener);
+    if (options.time) this.channel.client.setTimeout(() =&gt; this.stop('time'), options.time);
+  }
+
+  /**
+   * Verifies a message against the filter and options
+   * @private
+   * @param {Message} message The message
+   * @returns {boolean}
+   */
+  verify(message) {
+    if (this.channel ? this.channel.id !== message.channel.id : false) return false;
+    if (this.filter(message, this)) {
+      this.collected.set(message.id, message);
+      /**
+       * Emitted whenever the collector receives a message that passes the filter test.
+       * @param {Message} message The received message
+       * @param {MessageCollector} collector The collector the message passed through
+       * @event MessageCollector#message
+       */
+      this.emit('message', message, this);
+      if (this.collected.size &gt;= this.options.maxMatches) this.stop('matchesLimit');
+      else if (this.options.max &amp;&amp; this.collected.size === this.options.max) this.stop('limit');
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Returns a promise that resolves when a valid message is sent. Rejects
+   * with collected messages if the Collector ends before receiving a message.
+   * @type {Promise&lt;Message&gt;}
+   * @readonly
+   */
+  get next() {
+    return new Promise((resolve, reject) =&gt; {
+      if (this.ended) {
+        reject(this.collected);
+        return;
+      }
+
+      const cleanup = () =&gt; {
+        this.removeListener('message', onMessage);
+        this.removeListener('end', onEnd);
+      };
+
+      const onMessage = (...args) =&gt; {
+        cleanup();
+        resolve(...args);
+      };
+
+      const onEnd = (...args) =&gt; {
+        cleanup();
+        reject(...args);
+      };
+
+      this.once('message', onMessage);
+      this.once('end', onEnd);
+    });
+  }
+
+  /**
+   * Stops the collector and emits `end`.
+   * @param {string} [reason='user'] An optional reason for stopping the collector
+   */
+  stop(reason = 'user') {
+    if (this.ended) return;
+    this.ended = true;
+    this.channel.client.removeListener('message', this.listener);
+    /**
+     * Emitted when the Collector stops collecting.
+     * @param {Collection&lt;string, Message&gt;} collection A collection of messages collected
+     * during the lifetime of the collector, mapped by the ID of ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed" id="apidoc.element.discord.js.MessageEmbed">
+        function <span class="apidocSignatureSpan">discord.js.</span>MessageEmbed
+        <span class="apidocSignatureSpan">(message, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbed {
+  constructor(message, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated this embed
+     * @name MessageEmbed#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: message.client });
+
+    /**
+     * The message this embed is part of
+     * @type {Message}
+     */
+    this.message = message;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The type of this embed
+     * @type {string}
+     */
+    this.type = data.type;
+
+    /**
+     * The title of this embed, if there is one
+     * @type {?string}
+     */
+    this.title = data.title;
+
+    /**
+     * The description of this embed, if there is one
+     * @type {?string}
+     */
+    this.description = data.description;
+
+    /**
+     * The URL of this embed
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * The color of the embed
+     * @type {number}
+     */
+    this.color = data.color;
+
+    /**
+     * The fields of this embed
+     * @type {MessageEmbedField[]}
+     */
+    this.fields = [];
+    if (data.fields) for (const field of data.fields) this.fields.push(new MessageEmbedField(this, field));
+
+    /**
+     * The timestamp of this embed
+     * @type {number}
+     */
+    this.createdTimestamp = data.timestamp;
+
+    /**
+     * The thumbnail of this embed, if there is one
+     * @type {MessageEmbedThumbnail}
+     */
+    this.thumbnail = data.thumbnail ? new MessageEmbedThumbnail(this, data.thumbnail) : null;
+
+    /**
+     * The author of this embed, if there is one
+     * @type {MessageEmbedAuthor}
+     */
+    this.author = data.author ? new MessageEmbedAuthor(this, data.author) : null;
+
+    /**
+     * The provider of this embed, if there is one
+     * @type {MessageEmbedProvider}
+     */
+    this.provider = data.provider ? new MessageEmbedProvider(this, data.provider) : null;
+
+    /**
+     * The footer of this embed
+     * @type {MessageEmbedFooter}
+     */
+    this.footer = data.footer ? new MessageEmbedFooter(this, data.footer) : null;
+  }
+
+  /**
+   * The date this embed was created
+   * @type {Date}
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * The hexadecimal version of the embed color, with a leading hash.
+   * @type {string}
+   * @readonly
+   */
+  get hexColor() {
+    let col = this.color.toString(16);
+    while (col.length &lt; 6) col = `0${col}`;
+    return `#${col}`;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageReaction" id="apidoc.element.discord.js.MessageReaction">
+        function <span class="apidocSignatureSpan">discord.js.</span>MessageReaction
+        <span class="apidocSignatureSpan">(message, emoji, count, me)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageReaction {
+  constructor(message, emoji, count, me) {
+<span class="apidocCodeCommentSpan">    /**
+     * The message that this reaction refers to
+     * @type {Message}
+     */
+</span>    this.message = message;
+
+    /**
+     * Whether the client has given this reaction
+     * @type {boolean}
+     */
+    this.me = me;
+
+    /**
+     * The number of people that have given the same reaction.
+     * @type {number}
+     */
+    this.count = count || 0;
+
+    /**
+     * The users that have given this reaction, mapped by their ID.
+     * @type {Collection&lt;string, User&gt;}
+     */
+    this.users = new Collection();
+
+    this._emoji = new ReactionEmoji(this, emoji.name, emoji.id);
+  }
+
+  /**
+   * The emoji of this reaction, either an Emoji object for known custom emojis, or a ReactionEmoji
+   * object which has fewer properties. Whatever the prototype of the emoji, it will still have
+   * `name`, `id`, `identifier` and `toString()`
+   * @type {Emoji|ReactionEmoji}
+   */
+  get emoji() {
+    if (this._emoji instanceof Emoji) return this._emoji;
+    // check to see if the emoji has become known to the client
+    if (this._emoji.id) {
+      const emojis = this.message.client.emojis;
+      if (emojis.has(this._emoji.id)) {
+        const emoji = emojis.get(this._emoji.id);
+        this._emoji = emoji;
+        return emoji;
+      }
+    }
+    return this._emoji;
+  }
+
+  /**
+   * Removes a user from this reaction.
+   * @param {UserResolvable} [user=this.message.client.user] User to remove the reaction of
+   * @returns {Promise&lt;MessageReaction&gt;}
+   */
+  remove(user = this.message.client.user) {
+    const message = this.message;
+    user = this.message.client.resolver.resolveUserID(user);
+    if (!user) return Promise.reject('Couldn\'t resolve the user ID to remove from the reaction.');
+    return message.client.rest.methods.removeMessageReaction(
+      message, this.emoji.identifier, user
+    );
+  }
+
+  /**
+   * Fetch all the users that gave this reaction. Resolves with a collection of users, mapped by their IDs.
+   * @param {number} [limit=100] the maximum amount of users to fetch, defaults to 100
+   * @returns {Promise&lt;Collection&lt;string, User&gt;&gt;}
+   */
+  fetchUsers(limit = 100) {
+    const message = this.message;
+    return message.client.rest.methods.getMessageReactionUsers(
+      message, this.emoji.identifier, limit
+    ).then(users =&gt; {
+      this.users = new Collection();
+      for (const rawUser of users) {
+        const user = this.message.client.dataManager.newUser(rawUser);
+        this.users.set(user.id, user);
+      }
+      this.count = this.users.size;
+      return users;
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.OAuth2Application" id="apidoc.element.discord.js.OAuth2Application">
+        function <span class="apidocSignatureSpan">discord.js.</span>OAuth2Application
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class OAuth2Application {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated the application
+     * @name OAuth2Application#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of the app
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The name of the app
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The app's description
+     * @type {string}
+     */
+    this.description = data.description;
+
+    /**
+     * The app's icon hash
+     * @type {string}
+     */
+    this.icon = data.icon;
+
+    /**
+     * The app's icon URL
+     * @type {string}
+     */
+    this.iconURL = `https://cdn.discordapp.com/app-icons/${this.id}/${this.icon}.jpg`;
+
+    /**
+     * The app's RPC origins
+     * @type {Array&lt;string&gt;}
+     */
+    this.rpcOrigins = data.rpc_origins;
+  }
+
+  /**
+   * The timestamp the app was created at
+   * @type {number}
+   * @readonly
+   */
+  get createdTimestamp() {
+    return (this.id / 4194304) + 1420070400000;
+  }
+
+  /**
+   * The time the app was created
+   * @type {Date}
+   * @readonly
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * When concatenated with a string, this automatically concatenates the app name rather than the app object.
+   * @returns {string}
+   */
+  toString() {
+    return this.name;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.PartialGuild" id="apidoc.element.discord.js.PartialGuild">
+        function <span class="apidocSignatureSpan">discord.js.</span>PartialGuild
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class PartialGuild {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that instantiated this PartialGuild
+     * @name PartialGuild#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of this guild
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The name of this guild
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The hash of this guild's icon, or null if there is none.
+     * @type {?string}
+     */
+    this.icon = data.icon;
+
+    /**
+     * The hash of the guild splash image, or null if no splash (VIP only)
+     * @type {?string}
+     */
+    this.splash = data.splash;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.PartialGuildChannel" id="apidoc.element.discord.js.PartialGuildChannel">
+        function <span class="apidocSignatureSpan">discord.js.</span>PartialGuildChannel
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class PartialGuildChannel {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that instantiated this PartialGuildChannel
+     * @name PartialGuildChannel#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of this guild channel
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The name of this guild channel
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The type of this guild channel - `text` or `voice`
+     * @type {string}
+     */
+    this.type = Constants.ChannelTypes.text === data.type ? 'text' : 'voice';
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.PermissionOverwrites" id="apidoc.element.discord.js.PermissionOverwrites">
+        function <span class="apidocSignatureSpan">discord.js.</span>PermissionOverwrites
+        <span class="apidocSignatureSpan">(guildChannel, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class PermissionOverwrites {
+  constructor(guildChannel, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The GuildChannel this overwrite is for
+     * @name PermissionOverwrites#channel
+     * @type {GuildChannel}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'channel', { value: guildChannel });
+
+    if (data) this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of this overwrite, either a user ID or a role ID
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The type of this overwrite
+     * @type {string}
+     */
+    this.type = data.type;
+
+    this.deny = data.deny;
+    this.allow = data.allow;
+  }
+
+  /**
+   * Delete this Permission Overwrite.
+   * @returns {Promise&lt;PermissionOverwrites&gt;}
+   */
+  delete() {
+    return this.channel.client.rest.methods.deletePermissionOverwrites(this);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Presence" id="apidoc.element.discord.js.Presence">
+        function <span class="apidocSignatureSpan">discord.js.</span>Presence
+        <span class="apidocSignatureSpan">(data = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Presence {
+  constructor(data = {}) {
+<span class="apidocCodeCommentSpan">    /**
+     * The status of the presence:
+     *
+     * * **`online`** - user is online
+     * * **`offline`** - user is offline or invisible
+     * * **`idle`** - user is AFK
+     * * **`dnd`** - user is in Do not Disturb
+     * @type {string}
+     */
+</span>    this.status = data.status || 'offline';
+
+    /**
+     * The game that the user is playing, `null` if they aren't playing a game.
+     * @type {?Game}
+     */
+    this.game = data.game ? new Game(data.game) : null;
+  }
+
+  update(data) {
+    this.status = data.status || this.status;
+    this.game = data.game ? new Game(data.game) : null;
+  }
+
+  /**
+   * Whether this presence is equal to another
+   * @param {Presence} presence Presence to compare with
+   * @returns {boolean}
+   */
+  equals(presence) {
+    return this === presence || (
+      presence &amp;&amp;
+      this.status === presence.status &amp;&amp;
+      this.game ? this.game.equals(presence.game) : !presence.game
+    );
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.ReactionEmoji" id="apidoc.element.discord.js.ReactionEmoji">
+        function <span class="apidocSignatureSpan">discord.js.</span>ReactionEmoji
+        <span class="apidocSignatureSpan">(reaction, name, id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ReactionEmoji {
+  constructor(reaction, name, id) {
+<span class="apidocCodeCommentSpan">    /**
+     * The message reaction this emoji refers to
+     * @type {MessageReaction}
+     */
+</span>    this.reaction = reaction;
+
+    /**
+     * The name of this reaction emoji.
+     * @type {string}
+     */
+    this.name = name;
+
+    /**
+     * The ID of this reaction emoji.
+     * @type {string}
+     */
+    this.id = id;
+  }
+
+  /**
+   * The identifier of this emoji, used for message reactions
+   * @readonly
+   * @type {string}
+   */
+  get identifier() {
+    if (this.id) return `${this.name}:${this.id}`;
+    return encodeURIComponent(this.name);
+  }
+
+  /**
+   * Creates the text required to form a graphical emoji on Discord.
+   * @example
+   * // send the emoji used in a reaction to the channel the reaction is part of
+   * reaction.message.channel.sendMessage(`The emoji used is ${reaction.emoji}`);
+   * @returns {string}
+   */
+  toString() {
+    return this.id ? `&lt;:${this.name}:${this.id}&gt;` : this.name;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.RichEmbed" id="apidoc.element.discord.js.RichEmbed">
+        function <span class="apidocSignatureSpan">discord.js.</span>RichEmbed
+        <span class="apidocSignatureSpan">(data = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class RichEmbed {
+  constructor(data = {}) {
+<span class="apidocCodeCommentSpan">    /**
+     * Title for this Embed
+     * @type {string}
+     */
+</span>    this.title = data.title;
+
+    /**
+     * Description for this Embed
+     * @type {string}
+     */
+    this.description = data.description;
+
+    /**
+     * URL for this Embed
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * Color for this Embed
+     * @type {number}
+     */
+    this.color = data.color;
+
+    /**
+     * Author for this Embed
+     * @type {Object}
+     */
+    this.author = data.author;
+
+    /**
+     * Timestamp for this Embed
+     * @type {Date}
+     */
+    this.timestamp = data.timestamp;
+
+    /**
+     * Fields for this Embed
+     * @type {Object[]}
+     */
+    this.fields = data.fields || [];
+
+    /**
+     * Thumbnail for this Embed
+     * @type {Object}
+     */
+    this.thumbnail = data.thumbnail;
+
+    /**
+     * Image for this Embed
+     * @type {Object}
+     */
+    this.image = data.image;
+
+    /**
+     * Footer for this Embed
+     * @type {Object}
+     */
+    this.footer = data.footer;
+  }
+
+  /**
+   * Sets the title of this embed
+   * @param {StringResolvable} title The title
+   * @returns {RichEmbed} This embed
+   */
+  setTitle(title) {
+    title = resolveString(title);
+    if (title.length &gt; 256) throw new RangeError('RichEmbed titles may not exceed 256 characters.');
+    this.title = title;
+    return this;
+  }
+
+  /**
+   * Sets the description of this embed
+   * @param {StringResolvable} description The description
+   * @returns {RichEmbed} This embed
+   */
+  setDescription(description) {
+    description = resolveString(description);
+    if (description.length &gt; 2048) throw new RangeError('RichEmbed descriptions may not exceed 2048 characters.');
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Sets the URL of this embed
+   * @param {string} url The URL
+   * @returns {RichEmbed} This embed
+   */
+  setURL(url) {
+    this.url = url;
+    return this;
+  }
+
+  /**
+   * Sets the color of this embed
+   * @param {string|number|number[]} color The color to set
+   * @returns {RichEmbed} This embed
+   */
+  setColor(color) {
+    let radix = 10;
+    if (color instanceof Array) {
+      color = (color[0] &lt;&lt; 16) + (color[1] &lt;&lt; 8) + color[2];
+    } else if (typeof color === 'string' &amp;&amp; color.startsWith('#')) {
+      radix = 16;
+      color = color.replace('#', '');
+    }
+    color = parseInt(color, radix);
+    if (color &lt; 0 || color &gt; 0xFFFFFF) {
+      throw new RangeError('RichEmbed color must be within the range 0 - 16777215 (0xFFFFFF).');
+    } else if (color &amp;&amp; isNaN(color)) {
+      throw new TypeError('Unable to convert RichEmbed color to a number.');
+    }
+    this.color = color;
+    return this;
+  }
+
+  /**
+   * Sets the author of this embed
+   * @param {StringResolvable} name The name of the author
+   * @param {string} [icon] The icon URL of the author
+   * @param {string} [url] The URL of the author
+   * @returns {RichEmbed} This embed
+   */
+  setAuthor(name, icon, url) {
+    this.author = { name: resolveString(name), icon_url: icon, url };
+    return this;
+  }
+
+  /**
+   * Sets the timestamp of this embed
+   * @param {Date} [timestamp=current date] The timestamp
+   * @returns {RichEmbed} This embed
+   */
+  setTimestamp(timestamp = new Date()) {
+    this.timestamp = timestamp;
+    return this;
+  }
+
+  /**
+   * Adds a field to the embed (max 25)
+   * @param {StringResolvable} name The name of the field
+   * @param {StringResolvable} value The value of the field
+   * @param {boolean} [inline=false] Set the field to display inline
+   * @returns {RichEmbed} This embed
+   */
+  addField(name, value, inline = false) {
+    if (this.fields.length &gt;= 25) throw new RangeError('RichEmbeds may not exceed 25 fields.');
+    name = resolveString(name);
+    if (name.length &gt; 256) throw new RangeError('RichEmbed field names may not exceed 256 characters.');
+    value = resolveString(value);
+    if (value.length &gt; 1024) throw new RangeError('RichEmbed field values may not exceed 1024 characters.');
+    this.fields.push({ name: String(name), value: value, inline });
+    return ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Role" id="apidoc.element.discord.js.Role">
+        function <span class="apidocSignatureSpan">discord.js.</span>Role
+        <span class="apidocSignatureSpan">(guild, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Role {
+  constructor(guild, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated the role
+     * @name Role#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: guild.client });
+
+    /**
+     * The guild that the role belongs to
+     * @type {Guild}
+     */
+    this.guild = guild;
+
+    if (data) this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of the role (unique to the guild it is part of)
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The name of the role
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The base 10 color of the role
+     * @type {number}
+     */
+    this.color = data.color;
+
+    /**
+     * If true, users that are part of this role will appear in a separate category in the users list
+     * @type {boolean}
+     */
+    this.hoist = data.hoist;
+
+    /**
+     * The position of the role in the role manager
+     * @type {number}
+     */
+    this.position = data.position;
+
+    /**
+     * The evaluated permissions number
+     * @type {number}
+     */
+    this.permissions = data.permissions;
+
+    /**
+     * Whether or not the role is managed by an external service
+     * @type {boolean}
+     */
+    this.managed = data.managed;
+
+    /**
+     * Whether or not the role can be mentioned by anyone
+     * @type {boolean}
+     */
+    this.mentionable = data.mentionable;
+  }
+
+  /**
+   * The timestamp the role was created at
+   * @type {number}
+   * @readonly
+   */
+  get createdTimestamp() {
+    return (this.id / 4194304) + 1420070400000;
+  }
+
+  /**
+   * The time the role was created
+   * @type {Date}
+   * @readonly
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * The hexadecimal version of the role color, with a leading hashtag.
+   * @type {string}
+   * @readonly
+   */
+  get hexColor() {
+    let col = this.color.toString(16);
+    while (col.length &lt; 6) col = `0${col}`;
+    return `#${col}`;
+  }
+
+  /**
+   * The cached guild members that have this role.
+   * @type {Collection&lt;string, GuildMember&gt;}
+   * @readonly
+   */
+  get members() {
+    return this.guild.members.filter(m =&gt; m.roles.has(this.id));
+  }
+
+  /**
+   * Whether the role is editable by the client user.
+   * @type {boolean}
+   * @readonly
+   */
+  get editable() {
+    if (this.managed) return false;
+    const clientMember = this.guild.member(this.client.user);
+    if (!clientMember.hasPermission(Constants.PermissionFlags.MANAGE_ROLES_OR_PERMISSIONS)) return false;
+    return clientMember.highestRole.comparePositionTo(this) &gt; 0;
+  }
+
+  /**
+   * Get an object mapping permission names to whether or not the role enables that permission
+   * @returns {Object&lt;string, boolean&gt;}
+   * @example
+   * // print the serialized role
+   * console.log(role.serialize());
+   */
+  serialize() {
+    const serializedPermissions = {};
+    for (const permissionName in Constants.PermissionFlags) {
+      serializedPermissions[permissionName] = this.hasPermission(permissionName);
+    }
+    return serializedPermissions;
+  }
+
+  /**
+   * Checks if the role has a permission.
+   * @param {PermissionResolvable} permission The permission to check for
+   * @param {boolean} [explicit=false] Whether to require the role to explicitly have the exact permission
+   * @returns {boolean}
+   * @example
+   * // see if a role can ban a member
+   * if (role.hasPermission('BAN_MEMBERS')) {
+   *   console.log('This role can ban members');
+   * } else {
+   *   console.log('This role can\'t ban members');
+   * }
+   */
+  hasPermission(permission, explicit = false) {
+    permission = this.client.resolver.resolvePermission(permission);
+    if (!explicit &amp;&amp; (this.permissions &amp; Constants.PermissionFlags.ADMINISTRATOR) &gt; 0) return true;
+    return (this.permissions &amp; permission) &gt; 0;
+  }
+
+  /**
+   * Checks if the role has all specified permissions.
+   * @param {PermissionResolvable[]} permissions The permissions to check for
+   * @param {boolean} [explicit=false] Whether to require the role to explicitly have the exact permissions
+   * @returns {boolean}
+   */
+  hasPer ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Shard" id="apidoc.element.discord.js.Shard">
+        function <span class="apidocSignatureSpan">discord.js.</span>Shard
+        <span class="apidocSignatureSpan">(manager, id, args = [])</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Shard {
+<span class="apidocCodeCommentSpan">  /**
+   * @param {ShardingManager} manager The sharding manager
+   * @param {number} id The ID of this shard
+   * @param {Array} [args=[]] Command line arguments to pass to the script
+   */
+</span>  constructor(manager, id, args = []) {
+    /**
+     * Manager that created the shard
+     * @type {ShardingManager}
+     */
+    this.manager = manager;
+
+    /**
+     * ID of the shard
+     * @type {number}
+     */
+    this.id = id;
+
+    /**
+     * The environment variables for the shard
+     * @type {Object}
+     */
+    this.env = Object.assign({}, process.env, {
+      SHARD_ID: this.id,
+      SHARD_COUNT: this.manager.totalShards,
+      CLIENT_TOKEN: this.manager.token,
+    });
+
+    /**
+     * Process of the shard
+     * @type {ChildProcess}
+     */
+    this.process = childProcess.fork(path.resolve(this.manager.file), args, {
+      env: this.env,
+    });
+    this.process.on('message', this._handleMessage.bind(this));
+    this.process.once('exit', () =&gt; {
+      if (this.manager.respawn) this.manager.createShard(this.id);
+    });
+
+    this._evals = new Map();
+    this._fetches = new Map();
+  }
+
+  /**
+   * Sends a message to the shard's process.
+   * @param {*} message Message to send to the shard
+   * @returns {Promise&lt;Shard&gt;}
+   */
+  send(message) {
+    return new Promise((resolve, reject) =&gt; {
+      const sent = this.process.send(message, err =&gt; {
+        if (err) reject(err); else resolve(this);
+      });
+      if (!sent) throw new Error('Failed to send message to shard\'s process.');
+    });
+  }
+
+  /**
+   * Fetches a Client property value of the shard.
+   * @param {string} prop Name of the Client property to get, using periods for nesting
+   * @returns {Promise&lt;*&gt;}
+   * @example
+   * shard.fetchClientValue('guilds.size').then(count =&gt; {
+   *   console.log(`${count} guilds in shard ${shard.id}`);
+   * }).catch(console.error);
+   */
+  fetchClientValue(prop) {
+    if (this._fetches.has(prop)) return this._fetches.get(prop);
+
+    const promise = new Promise((resolve, reject) =&gt; {
+      const listener = message =&gt; {
+        if (!message || message._fetchProp !== prop) return;
+        this.process.removeListener('message', listener);
+        this._fetches.delete(prop);
+        resolve(message._result);
+      };
+      this.process.on('message', listener);
+
+      this.send({ _fetchProp: prop }).catch(err =&gt; {
+        this.process.removeListener('message', listener);
+        this._fetches.delete(prop);
+        reject(err);
+      });
+    });
+
+    this._fetches.set(prop, promise);
+    return promise;
+  }
+
+  /**
+   * Evaluates a script on the shard, in the context of the Client.
+   * @param {string} script JavaScript to run on the shard
+   * @returns {Promise&lt;*&gt;} Result of the script execution
+   */
+  eval(script) {
+    if (this._evals.has(script)) return this._evals.get(script);
+
+    const promise = new Promise((resolve, reject) =&gt; {
+      const listener = message =&gt; {
+        if (!message || message._eval !== script) return;
+        this.process.removeListener('message', listener);
+        this._evals.delete(script);
+        if (!message._error) resolve(message._result); else reject(makeError(message._error));
+      };
+      this.process.on('message', listener);
+
+      this.send({ _eval: script }).catch(err =&gt; {
+        this.process.removeListener('message', listener);
+        this._evals.delete(script);
+        reject(err);
+      });
+    });
+
+    this._evals.set(script, promise);
+    return promise;
+  }
+
+  /**
+   * Handles an IPC message
+   * @param {*} message Message received
+   * @private
+   */
+  _handleMessage(message) {
+    if (message) {
+      // Shard is requesting a property fetch
+      if (message._sFetchProp) {
+        this.manager.fetchClientValues(message._sFetchProp).then(
+          results =&gt; this.send({ _sFetchProp: message._sFetchProp, _result: results }),
+          err =&gt; this.send({ _sFetchProp: message._sFetchProp, _error: makePlainError(err) })
+        );
+        return;
+      }
+
+      // Shard is requesting an eval broadcast
+      if (message._sEval) {
+        this.manager.broadcastEval(message._sEval).t ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.ShardClientUtil" id="apidoc.element.discord.js.ShardClientUtil">
+        function <span class="apidocSignatureSpan">discord.js.</span>ShardClientUtil
+        <span class="apidocSignatureSpan">(client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ShardClientUtil {
+<span class="apidocCodeCommentSpan">  /**
+   * @param {Client} client Client of the current shard
+   */
+</span>  constructor(client) {
+    this.client = client;
+    process.on('message', this._handleMessage.bind(this));
+  }
+
+  /**
+   * ID of this shard
+   * @type {number}
+   * @readonly
+   */
+  get id() {
+    return this.client.options.shardId;
+  }
+
+  /**
+   * Total number of shards
+   * @type {number}
+   * @readonly
+   */
+  get count() {
+    return this.client.options.shardCount;
+  }
+
+  /**
+   * Sends a message to the master process
+   * @param {*} message Message to send
+   * @returns {Promise&lt;void&gt;}
+   */
+  send(message) {
+    return new Promise((resolve, reject) =&gt; {
+      const sent = process.send(message, err =&gt; {
+        if (err) reject(err); else resolve();
+      });
+      if (!sent) throw new Error('Failed to send message to master process.');
+    });
+  }
+
+  /**
+   * Fetches a Client property value of each shard.
+   * @param {string} prop Name of the Client property to get, using periods for nesting
+   * @returns {Promise&lt;Array&gt;}
+   * @example
+   * client.shard.fetchClientValues('guilds.size').then(results =&gt; {
+   *   console.log(`${results.reduce((prev, val) =&gt; prev + val, 0)} total guilds`);
+   * }).catch(console.error);
+   */
+  fetchClientValues(prop) {
+    return new Promise((resolve, reject) =&gt; {
+      const listener = message =&gt; {
+        if (!message || message._sFetchProp !== prop) return;
+        process.removeListener('message', listener);
+        if (!message._error) resolve(message._result); else reject(makeError(message._error));
+      };
+      process.on('message', listener);
+
+      this.send({ _sFetchProp: prop }).catch(err =&gt; {
+        process.removeListener('message', listener);
+        reject(err);
+      });
+    });
+  }
+
+  /**
+   * Evaluates a script on all shards, in the context of the Clients.
+   * @param {string} script JavaScript to run on each shard
+   * @returns {Promise&lt;Array&gt;} Results of the script execution
+   */
+  broadcastEval(script) {
+    return new Promise((resolve, reject) =&gt; {
+      const listener = message =&gt; {
+        if (!message || message._sEval !== script) return;
+        process.removeListener('message', listener);
+        if (!message._error) resolve(message._result); else reject(makeError(message._error));
+      };
+      process.on('message', listener);
+
+      this.send({ _sEval: script }).catch(err =&gt; {
+        process.removeListener('message', listener);
+        reject(err);
+      });
+    });
+  }
+
+  /**
+   * Handles an IPC message
+   * @param {*} message Message received
+   * @private
+   */
+  _handleMessage(message) {
+    if (!message) return;
+    if (message._fetchProp) {
+      const props = message._fetchProp.split('.');
+      let value = this.client;
+      for (const prop of props) value = value[prop];
+      this._respond('fetchProp', { _fetchProp: message._fetchProp, _result: value });
+    } else if (message._eval) {
+      try {
+        this._respond('eval', { _eval: message._eval, _result: this.client._eval(message._eval) });
+      } catch (err) {
+        this._respond('eval', { _eval: message._eval, _error: makePlainError(err) });
+      }
+    }
+  }
+
+  /**
+   * Sends a message to the master process, emitting an error from the client upon failure
+   * @param {string} type Type of response to send
+   * @param {*} message Message to send
+   * @private
+   */
+  _respond(type, message) {
+    this.send(message).catch(err =&gt; {
+      err.message = `Error when sending ${type} response to master process: ${err.message}`;
+      this.client.emit('error', err);
+    });
+  }
+
+  /**
+   * Creates/gets the singleton of this class
+   * @param {Client} client Client to use
+   * @returns {ShardClientUtil}
+   */
+  static singleton(client) {
+    if (!this._singleton) {
+      this._singleton = new this(client);
+    } else {
+      client.emit('warn', 'Multiple clients created in child process; only the first will handle sharding helpers.');
+    }
+    return this._singleton;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.ShardingManager" id="apidoc.element.discord.js.ShardingManager">
+        function <span class="apidocSignatureSpan">discord.js.</span>ShardingManager
+        <span class="apidocSignatureSpan">(file, options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ShardingManager extends EventEmitter {
+<span class="apidocCodeCommentSpan">  /**
+   * @param {string} file Path to your shard script file
+   * @param {Object} [options] Options for the sharding manager
+   * @param {number|string} [options.totalShards='auto'] Number of shards to spawn, or "auto"
+   * @param {boolean} [options.respawn=true] Whether shards should automatically respawn upon exiting
+   * @param {string[]} [options.shardArgs=[]] Arguments to pass to the shard script when spawning
+   * @param {string} [options.token] Token to use for automatic shard count and passing to shards
+   */
+</span>  constructor(file, options = {}) {
+    super();
+    options = mergeDefault({
+      totalShards: 'auto',
+      respawn: true,
+      shardArgs: [],
+      token: null,
+    }, options);
+
+    /**
+     * Path to the shard script file
+     * @type {string}
+     */
+    this.file = file;
+    if (!file) throw new Error('File must be specified.');
+    if (!path.isAbsolute(file)) this.file = path.resolve(process.cwd(), file);
+    const stats = fs.statSync(this.file);
+    if (!stats.isFile()) throw new Error('File path does not point to a file.');
+
+    /**
+     * Amount of shards that this manager is going to spawn
+     * @type {number|string}
+     */
+    this.totalShards = options.totalShards;
+    if (this.totalShards !== 'auto') {
+      if (typeof this.totalShards !== 'number' || isNaN(this.totalShards)) {
+        throw new TypeError('Amount of shards must be a number.');
+      }
+      if (this.totalShards &lt; 1) throw new RangeError('Amount of shards must be at least 1.');
+      if (this.totalShards !== Math.floor(this.totalShards)) {
+        throw new RangeError('Amount of shards must be an integer.');
+      }
+    }
+
+    /**
+     * Whether shards should automatically respawn upon exiting
+     * @type {boolean}
+     */
+    this.respawn = options.respawn;
+
+    /**
+     * An array of arguments to pass to shards.
+     * @type {string[]}
+     */
+    this.shardArgs = options.shardArgs;
+
+    /**
+     * Token to use for obtaining the automatic shard count, and passing to shards
+     * @type {?string}
+     */
+    this.token = options.token ? options.token.replace(/^Bot\s*/i, '') : null;
+
+    /**
+     * A collection of shards that this manager has spawned
+     * @type {Collection&lt;number, Shard&gt;}
+     */
+    this.shards = new Collection();
+  }
+
+  /**
+   * Spawns a single shard.
+   * @param {number} id The ID of the shard to spawn. **This is usually not necessary.**
+   * @returns {Promise&lt;Shard&gt;}
+   */
+  createShard(id = this.shards.size) {
+    const shard = new Shard(this, id, this.shardArgs);
+    this.shards.set(id, shard);
+    /**
+     * Emitted upon launching a shard
+     * @event ShardingManager#launch
+     * @param {Shard} shard Shard that was launched
+     */
+    this.emit('launch', shard);
+    return Promise.resolve(shard);
+  }
+
+  /**
+   * Spawns multiple shards.
+   * @param {number} [amount=this.totalShards] Number of shards to spawn
+   * @param {number} [delay=5500] How long to wait in between spawning each shard (in milliseconds)
+   * @returns {Promise&lt;Collection&lt;number, Shard&gt;&gt;}
+   */
+  spawn(amount = this.totalShards, delay = 5500) {
+    if (amount === 'auto') {
+      return fetchRecommendedShards(this.token).then(count =&gt; {
+        this.totalShards = count;
+        return this._spawn(count, delay);
+      });
+    } else {
+      if (typeof amount !== 'number' || isNaN(amount)) throw new TypeError('Amount of shards must be a number.');
+      if (amount &lt; 1) throw new RangeError('Amount of shards must be at least 1.');
+      if (amount !== Math.floor(amount)) throw new TypeError('Amount of shards must be an integer.');
+      return this._spawn(amount, delay);
+    }
+  }
+
+  /**
+   * Actually spawns shards, unlike that poser above &gt;:(
+   * @param {number} amount Number of shards to spawn
+   * @param {number} delay How long to wait in between spawning each shard (in milliseconds)
+   * @returns {Promise&lt;Collection&lt;number, Shard&gt;&gt;}
+   * @private
+   */
+  _spawn(amount, delay) {
+    return new Promise(resolve =&gt; {
+      if (this.shards.size &gt;= amount) throw new Error(`Already spawn ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.TextChannel" id="apidoc.element.discord.js.TextChannel">
+        function <span class="apidocSignatureSpan">discord.js.</span>TextChannel
+        <span class="apidocSignatureSpan">(guild, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class TextChannel extends GuildChannel {
+  constructor(guild, data) {
+    super(guild, data);
+    this.type = 'text';
+    this.messages = new Collection();
+    this._typing = new Map();
+  }
+
+  setup(data) {
+    super.setup(data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * The topic of the text channel, if there is one.
+     * @type {?string}
+     */
+</span>    this.topic = data.topic;
+
+    this.lastMessageID = data.last_message_id;
+  }
+
+  /**
+   * A collection of members that can see this channel, mapped by their ID.
+   * @type {Collection&lt;string, GuildMember&gt;}
+   * @readonly
+   */
+  get members() {
+    const members = new Collection();
+    for (const member of this.guild.members.values()) {
+      if (this.permissionsFor(member).hasPermission('READ_MESSAGES')) {
+        members.set(member.id, member);
+      }
+    }
+    return members;
+  }
+
+  /**
+   * Fetch all webhooks for the channel.
+   * @returns {Promise&lt;Collection&lt;string, Webhook&gt;&gt;}
+   */
+  fetchWebhooks() {
+    return this.client.rest.methods.getChannelWebhooks(this);
+  }
+
+  /**
+   * Create a webhook for the channel.
+   * @param {string} name The name of the webhook.
+   * @param {BufferResolvable} avatar The avatar for the webhook.
+   * @returns {Promise&lt;Webhook&gt;} webhook The created webhook.
+   * @example
+   * channel.createWebhook('Snek', 'http://snek.s3.amazonaws.com/topSnek.png')
+   *  .then(webhook =&gt; console.log(`Created Webhook ${webhook}`))
+   *  .catch(console.error)
+   */
+  createWebhook(name, avatar) {
+    return new Promise(resolve =&gt; {
+      if (avatar.startsWith('data:')) {
+        resolve(this.client.rest.methods.createWebhook(this, name, avatar));
+      } else {
+        this.client.resolver.resolveBuffer(avatar).then(data =&gt;
+           resolve(this.client.rest.methods.createWebhook(this, name, data))
+        );
+      }
+    });
+  }
+
+  // These are here only for documentation purposes - they are implemented by TextBasedChannel
+  send() { return; }
+  sendMessage() { return; }
+  sendEmbed() { return; }
+  sendFile() { return; }
+  sendCode() { return; }
+  fetchMessage() { return; }
+  fetchMessages() { return; }
+  fetchPinnedMessages() { return; }
+  startTyping() { return; }
+  stopTyping() { return; }
+  get typing() { return; }
+  get typingCount() { return; }
+  createCollector() { return; }
+  awaitMessages() { return; }
+  bulkDelete() { return; }
+  _cacheMessage() { return; }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.User" id="apidoc.element.discord.js.User">
+        function <span class="apidocSignatureSpan">discord.js.</span>User
+        <span class="apidocSignatureSpan">(client, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class User {
+  constructor(client, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The Client that created the instance of the the User.
+     * @name User#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: client });
+
+    if (data) this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The ID of the user
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The username of the user
+     * @type {string}
+     */
+    this.username = data.username;
+
+    /**
+     * A discriminator based on username for the user
+     * @type {string}
+     */
+    this.discriminator = data.discriminator;
+
+    /**
+     * The ID of the user's avatar
+     * @type {string}
+     */
+    this.avatar = data.avatar;
+
+    /**
+     * Whether or not the user is a bot.
+     * @type {boolean}
+     */
+    this.bot = Boolean(data.bot);
+
+    /**
+     * The ID of the last message sent by the user, if one was sent.
+     * @type {?string}
+     */
+    this.lastMessageID = null;
+  }
+
+  patch(data) {
+    for (const prop of ['id', 'username', 'discriminator', 'avatar', 'bot']) {
+      if (typeof data[prop] !== 'undefined') this[prop] = data[prop];
+    }
+    if (data.token) this.client.token = data.token;
+  }
+
+  /**
+   * The timestamp the user was created at
+   * @type {number}
+   * @readonly
+   */
+  get createdTimestamp() {
+    return (this.id / 4194304) + 1420070400000;
+  }
+
+  /**
+   * The time the user was created
+   * @type {Date}
+   * @readonly
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * The presence of this user
+   * @type {Presence}
+   * @readonly
+   */
+  get presence() {
+    if (this.client.presences.has(this.id)) return this.client.presences.get(this.id);
+    for (const guild of this.client.guilds.values()) {
+      if (guild.presences.has(this.id)) return guild.presences.get(this.id);
+    }
+    return new Presence();
+  }
+
+  /**
+   * A link to the user's avatar (if they have one, otherwise null)
+   * @type {?string}
+   * @readonly
+   */
+  get avatarURL() {
+    if (!this.avatar) return null;
+    return Constants.Endpoints.avatar(this.id, this.avatar);
+  }
+
+  /**
+   * A link to the user's default avatar
+   * @type {string}
+   * @readonly
+   */
+  get defaultAvatarURL() {
+    let defaultAvatars = Object.values(Constants.DefaultAvatars);
+    let defaultAvatar = this.discriminator % defaultAvatars.length;
+    return Constants.Endpoints.assets(`${defaultAvatars[defaultAvatar]}.png`);
+  }
+
+  /**
+   * A link to the user's avatar if they have one. Otherwise a link to their default avatar will be returned
+   * @type {string}
+   * @readonly
+   */
+  get displayAvatarURL() {
+    return this.avatarURL || this.defaultAvatarURL;
+  }
+
+  /**
+   * The note that is set for the user
+   * &lt;warn&gt;This is only available when using a user account.&lt;/warn&gt;
+   * @type {?string}
+   * @readonly
+   */
+  get note() {
+    return this.client.user.notes.get(this.id) || null;
+  }
+
+  /**
+   * Check whether the user is typing in a channel.
+   * @param {ChannelResolvable} channel The channel to check in
+   * @returns {boolean}
+   */
+  typingIn(channel) {
+    channel = this.client.resolver.resolveChannel(channel);
+    return channel._typing.has(this.id);
+  }
+
+  /**
+   * Get the time that the user started typing.
+   * @param {ChannelResolvable} channel The channel to get the time in
+   * @returns {?Date}
+   */
+  typingSinceIn(channel) {
+    channel = this.client.resolver.resolveChannel(channel);
+    return channel._typing.has(this.id) ? new Date(channel._typing.get(this.id).since) : null;
+  }
+
+  /**
+   * Get the amount of time the user has been typing in a channel for (in milliseconds), or -1 if they're not typing.
+   * @param {ChannelResolvable} channel The channel to get the time in
+   * @returns {number}
+   */
+  typingDurationIn(channel) {
+    channel = this.client.resolver.resolveChannel(channel);
+    return channel._typing.has(this.id) ? channel._typing.get(this.id).elapsedTime : -1;
+  }
+
+  /**
+   * The DM between the client's user and this user
+   * @type {?DMChannel}
+   */
+  get dmChannel() {
+    return this.clie ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.VoiceChannel" id="apidoc.element.discord.js.VoiceChannel">
+        function <span class="apidocSignatureSpan">discord.js.</span>VoiceChannel
+        <span class="apidocSignatureSpan">(guild, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class VoiceChannel extends GuildChannel {
+  constructor(guild, data) {
+    super(guild, data);
+
+<span class="apidocCodeCommentSpan">    /**
+     * The members in this voice channel.
+     * @type {Collection&lt;string, GuildMember&gt;}
+     */
+</span>    this.members = new Collection();
+
+    this.type = 'voice';
+  }
+
+  setup(data) {
+    super.setup(data);
+
+    /**
+     * The bitrate of this voice channel
+     * @type {number}
+     */
+    this.bitrate = data.bitrate;
+
+    /**
+     * The maximum amount of users allowed in this channel - 0 means unlimited.
+     * @type {number}
+     */
+    this.userLimit = data.user_limit;
+  }
+
+  /**
+   * The voice connection for this voice channel, if the client is connected
+   * @type {?VoiceConnection}
+   * @readonly
+   */
+  get connection() {
+    const connection = this.guild.voiceConnection;
+    if (connection &amp;&amp; connection.channel.id === this.id) return connection;
+    return null;
+  }
+
+  /**
+   * Checks if the client has permission join the voice channel
+   * @type {boolean}
+   */
+  get joinable() {
+    if (this.client.browser) return false;
+    return this.permissionsFor(this.client.user).hasPermission('CONNECT');
+  }
+
+  /**
+   * Checks if the client has permission to send audio to the voice channel
+   * @type {boolean}
+   */
+  get speakable() {
+    return this.permissionsFor(this.client.user).hasPermission('SPEAK');
+  }
+
+  /**
+   * Sets the bitrate of the channel
+   * @param {number} bitrate The new bitrate
+   * @returns {Promise&lt;VoiceChannel&gt;}
+   * @example
+   * // set the bitrate of a voice channel
+   * voiceChannel.setBitrate(48000)
+   *  .then(vc =&gt; console.log(`Set bitrate to ${vc.bitrate} for ${vc.name}`))
+   *  .catch(console.error);
+   */
+  setBitrate(bitrate) {
+    return this.edit({ bitrate });
+  }
+
+  /**
+   * Sets the user limit of the channel
+   * @param {number} userLimit The new user limit
+   * @returns {Promise&lt;VoiceChannel&gt;}
+   * @example
+   * // set the user limit of a voice channel
+   * voiceChannel.setUserLimit(42)
+   *  .then(vc =&gt; console.log(`Set user limit to ${vc.userLimit} for ${vc.name}`))
+   *  .catch(console.error);
+   */
+  setUserLimit(userLimit) {
+    return this.edit({ userLimit });
+  }
+
+  /**
+   * Attempts to join this voice channel
+   * @returns {Promise&lt;VoiceConnection&gt;}
+   * @example
+   * // join a voice channel
+   * voiceChannel.join()
+   *  .then(connection =&gt; console.log('Connected!'))
+   *  .catch(console.error);
+   */
+  join() {
+    if (this.client.browser) return Promise.reject(new Error('Voice connections are not available in browsers.'));
+    return this.client.voice.joinChannel(this);
+  }
+
+  /**
+   * Leaves this voice channel
+   * @example
+   * // leave a voice channel
+   * voiceChannel.leave();
+   */
+  leave() {
+    if (this.client.browser) return;
+    const connection = this.client.voice.connections.get(this.guild.id);
+    if (connection &amp;&amp; connection.channel.id === this.id) connection.disconnect();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Webhook" id="apidoc.element.discord.js.Webhook">
+        function <span class="apidocSignatureSpan">discord.js.</span>Webhook
+        <span class="apidocSignatureSpan">(client, dataOrID, token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Webhook {
+  constructor(client, dataOrID, token) {
+    if (client) {
+<span class="apidocCodeCommentSpan">      /**
+       * The Client that instantiated the Webhook
+       * @name Webhook#client
+       * @type {Client}
+       * @readonly
+       */
+</span>      Object.defineProperty(this, 'client', { value: client });
+      if (dataOrID) this.setup(dataOrID);
+    } else {
+      this.id = dataOrID;
+      this.token = token;
+      Object.defineProperty(this, 'client', { value: this });
+    }
+  }
+
+  setup(data) {
+    /**
+     * The name of the webhook
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The token for the webhook
+     * @type {string}
+     */
+    this.token = data.token;
+
+    /**
+     * The avatar for the webhook
+     * @type {string}
+     */
+    this.avatar = data.avatar;
+
+    /**
+     * The ID of the webhook
+     * @type {string}
+     */
+    this.id = data.id;
+
+    /**
+     * The guild the webhook belongs to
+     * @type {string}
+     */
+    this.guildID = data.guild_id;
+
+    /**
+     * The channel the webhook belongs to
+     * @type {string}
+     */
+    this.channelID = data.channel_id;
+
+    /**
+     * The owner of the webhook
+     * @type {User}
+     */
+    if (data.user) this.owner = data.user;
+  }
+
+  /**
+   * Options that can be passed into sendMessage, sendTTSMessage, sendFile, sendCode
+   * @typedef {Object} WebhookMessageOptions
+   * @property {boolean} [tts=false] Whether or not the message should be spoken aloud
+   * @property {boolean} [disableEveryone=this.options.disableEveryone] Whether or not @everyone and @here
+   * should be replaced with plain-text
+   */
+
+  /**
+   * Send a message with this webhook
+   * @param {StringResolvable} content The content to send.
+   * @param {WebhookMessageOptions} [options={}] The options to provide.
+   * @returns {Promise&lt;Message|Message[]&gt;}
+   * @example
+   * // send a message
+   * webhook.sendMessage('hello!')
+   *  .then(message =&gt; console.log(`Sent message: ${message.content}`))
+   *  .catch(console.error);
+   */
+  sendMessage(content, options = {}) {
+    return this.client.rest.methods.sendWebhookMessage(this, content, options);
+  }
+
+  /**
+   * Send a raw slack message with this webhook
+   * @param {Object} body The raw body to send.
+   * @returns {Promise}
+   * @example
+   * // send a slack message
+   * webhook.sendSlackMessage({
+   *   'username': 'Wumpus',
+   *   'attachments': [{
+   *     'pretext': 'this looks pretty cool',
+   *     'color': '#F0F',
+   *     'footer_icon': 'http://snek.s3.amazonaws.com/topSnek.png',
+   *     'footer': 'Powered by sneks',
+   *     'ts': Date.now() / 1000
+   *   }]
+   * }).catch(console.error);
+   */
+  sendSlackMessage(body) {
+    return this.client.rest.methods.sendSlackWebhookMessage(this, body);
+  }
+
+  /**
+   * Send a text-to-speech message with this webhook
+   * @param {StringResolvable} content The content to send
+   * @param {WebhookMessageOptions} [options={}] The options to provide
+   * @returns {Promise&lt;Message|Message[]&gt;}
+   * @example
+   * // send a TTS message
+   * webhook.sendTTSMessage('hello!')
+   *  .then(message =&gt; console.log(`Sent tts message: ${message.content}`))
+   *  .catch(console.error);
+   */
+  sendTTSMessage(content, options = {}) {
+    Object.assign(options, { tts: true });
+    return this.client.rest.methods.sendWebhookMessage(this, content, options);
+  }
+
+  /**
+   * Send a file with this webhook
+   * @param {BufferResolvable} attachment The file to send
+   * @param {string} [fileName="file.jpg"] The name and extension of the file
+   * @param {StringResolvable} [content] Text message to send with the attachment
+   * @param {WebhookMessageOptions} [options] The options to provide
+   * @returns {Promise&lt;Message&gt;}
+   */
+  sendFile(attachment, fileName, content, options = {}) {
+    if (!fileName) {
+      if (typeof attachment === 'string') {
+        fileName = path.basename(attachment);
+      } else if (attachment &amp;&amp; attachment.path) {
+        fileName = path.basename(attachment.path);
+      } else {
+        fileName = 'file.jpg';
+      }
+    }
+    return this.client.resolver.resolveBuffer(attachment).then(file ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.WebhookClient" id="apidoc.element.discord.js.WebhookClient">
+        function <span class="apidocSignatureSpan">discord.js.</span>WebhookClient
+        <span class="apidocSignatureSpan">('1234', 'abcdef')</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class WebhookClient extends Webhook {
+<span class="apidocCodeCommentSpan">  /**
+   * @param {string} id The id of the webhook.
+   * @param {string} token the token of the webhook.
+   * @param {ClientOptions} [options] Options for the client
+   * @example
+   * // create a new webhook and send a message
+   * let hook = new Discord.WebhookClient('1234', 'abcdef')
+   * hook.sendMessage('This will send a message').catch(console.error)
+   */
+</span>  constructor(id, token, options) {
+    super(null, id, token);
+
+    /**
+     * The options the client was instantiated with
+     * @type {ClientOptions}
+     */
+    this.options = mergeDefault(Constants.DefaultOptions, options);
+
+    /**
+     * The REST manager of the client
+     * @type {RESTManager}
+     * @private
+     */
+    this.rest = new RESTManager(this);
+
+    /**
+     * The Data Resolver of the Client
+     * @type {ClientDataResolver}
+     * @private
+     */
+    this.resolver = new ClientDataResolver(this);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+class WebhookClient extends Webhook {
+  /**
+   * @param {string} id The id of the webhook.
+   * @param {string} token the token of the webhook.
+   * @param {ClientOptions} [options] Options for the client
+   * @example
+   * // create a new webhook and send a message
+   * let hook = new Discord.<span class="apidocCodeKeywordSpan">WebhookClient</span>('1234', 'abcdef')
+   * hook.sendMessage('This will send a message').catch(console.error)
+   */
+  constructor(id, token, options) {
+super(null, id, token);
+
+/**
+ * The options the client was instantiated with
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.escapeMarkdown" id="apidoc.element.discord.js.escapeMarkdown">
+        function <span class="apidocSignatureSpan">discord.js.</span>escapeMarkdown
+        <span class="apidocSignatureSpan">(text, onlyCodeBlock = false, onlyInlineCode = false)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escapeMarkdown(text, onlyCodeBlock = false, onlyInlineCode = false) {
+  if (onlyCodeBlock) return text.replace(/```/g, '`\u200b``');
+  if (onlyInlineCode) return text.replace(/\\(`|\\)/g, '$1').replace(/(`|\\)/g, '\\$1');
+  return text.replace(/\\(\*|_|`|~|\\)/g, '$1').replace(/(\*|_|`|~|\\)/g, '\\$1');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.fetchRecommendedShards" id="apidoc.element.discord.js.fetchRecommendedShards">
+        function <span class="apidocSignatureSpan">discord.js.</span>fetchRecommendedShards
+        <span class="apidocSignatureSpan">(token)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fetchRecommendedShards(token) {
+  return new Promise((resolve, reject) =&gt; {
+    if (!token) throw new Error('A token must be provided.');
+    superagent.get(botGateway)
+      .set('Authorization', `Bot ${token.replace(/^Bot\s*/i, '')}`)
+      .end((err, res) =&gt; {
+        if (err) reject(err);
+        resolve(res.body.shards);
+      });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.js.MessageEmbed" id="apidoc.element.discord.js.js.MessageEmbed">
+        function <span class="apidocSignatureSpan">discord.js.</span>js.MessageEmbed
+        <span class="apidocSignatureSpan">(message, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbed {
+  constructor(message, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated this embed
+     * @name MessageEmbed#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: message.client });
+
+    /**
+     * The message this embed is part of
+     * @type {Message}
+     */
+    this.message = message;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The type of this embed
+     * @type {string}
+     */
+    this.type = data.type;
+
+    /**
+     * The title of this embed, if there is one
+     * @type {?string}
+     */
+    this.title = data.title;
+
+    /**
+     * The description of this embed, if there is one
+     * @type {?string}
+     */
+    this.description = data.description;
+
+    /**
+     * The URL of this embed
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * The color of the embed
+     * @type {number}
+     */
+    this.color = data.color;
+
+    /**
+     * The fields of this embed
+     * @type {MessageEmbedField[]}
+     */
+    this.fields = [];
+    if (data.fields) for (const field of data.fields) this.fields.push(new MessageEmbedField(this, field));
+
+    /**
+     * The timestamp of this embed
+     * @type {number}
+     */
+    this.createdTimestamp = data.timestamp;
+
+    /**
+     * The thumbnail of this embed, if there is one
+     * @type {MessageEmbedThumbnail}
+     */
+    this.thumbnail = data.thumbnail ? new MessageEmbedThumbnail(this, data.thumbnail) : null;
+
+    /**
+     * The author of this embed, if there is one
+     * @type {MessageEmbedAuthor}
+     */
+    this.author = data.author ? new MessageEmbedAuthor(this, data.author) : null;
+
+    /**
+     * The provider of this embed, if there is one
+     * @type {MessageEmbedProvider}
+     */
+    this.provider = data.provider ? new MessageEmbedProvider(this, data.provider) : null;
+
+    /**
+     * The footer of this embed
+     * @type {MessageEmbedFooter}
+     */
+    this.footer = data.footer ? new MessageEmbedFooter(this, data.footer) : null;
+  }
+
+  /**
+   * The date this embed was created
+   * @type {Date}
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * The hexadecimal version of the embed color, with a leading hash.
+   * @type {string}
+   * @readonly
+   */
+  get hexColor() {
+    let col = this.color.toString(16);
+    while (col.length &lt; 6) col = `0${col}`;
+    return `#${col}`;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.splitMessage" id="apidoc.element.discord.js.splitMessage">
+        function <span class="apidocSignatureSpan">discord.js.</span>splitMessage
+        <span class="apidocSignatureSpan">(text, { maxLength = 1950, char = '\n', prepend = '', append = '' } = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function splitMessage(text, { maxLength = 1950, char = '\n', prepend = '', append = '' } = {}) {
+  if (text.length &lt;= maxLength) return text;
+  const splitText = text.split(char);
+  if (splitText.length === 1) throw new Error('Message exceeds the max length and contains no split characters.');
+  const messages = [''];
+  let msg = 0;
+  for (let i = 0; i &lt; splitText.length; i++) {
+    if (messages[msg].length + splitText[i].length + 1 &gt; maxLength) {
+      messages[msg] += append;
+      messages.push(prepend);
+      msg++;
+    }
+    messages[msg] += (messages[msg].length &gt; 0 &amp;&amp; messages[msg] !== prepend ? char : '') + splitText[i];
+  }
+  return messages;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.discord.js.MessageEmbed" id="apidoc.module.discord.js.MessageEmbed">module discord.js.MessageEmbed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed.MessageEmbed" id="apidoc.element.discord.js.MessageEmbed.MessageEmbed">
+        function <span class="apidocSignatureSpan">discord.js.</span>MessageEmbed
+        <span class="apidocSignatureSpan">(message, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbed {
+  constructor(message, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The client that instantiated this embed
+     * @name MessageEmbed#client
+     * @type {Client}
+     * @readonly
+     */
+</span>    Object.defineProperty(this, 'client', { value: message.client });
+
+    /**
+     * The message this embed is part of
+     * @type {Message}
+     */
+    this.message = message;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The type of this embed
+     * @type {string}
+     */
+    this.type = data.type;
+
+    /**
+     * The title of this embed, if there is one
+     * @type {?string}
+     */
+    this.title = data.title;
+
+    /**
+     * The description of this embed, if there is one
+     * @type {?string}
+     */
+    this.description = data.description;
+
+    /**
+     * The URL of this embed
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * The color of the embed
+     * @type {number}
+     */
+    this.color = data.color;
+
+    /**
+     * The fields of this embed
+     * @type {MessageEmbedField[]}
+     */
+    this.fields = [];
+    if (data.fields) for (const field of data.fields) this.fields.push(new MessageEmbedField(this, field));
+
+    /**
+     * The timestamp of this embed
+     * @type {number}
+     */
+    this.createdTimestamp = data.timestamp;
+
+    /**
+     * The thumbnail of this embed, if there is one
+     * @type {MessageEmbedThumbnail}
+     */
+    this.thumbnail = data.thumbnail ? new MessageEmbedThumbnail(this, data.thumbnail) : null;
+
+    /**
+     * The author of this embed, if there is one
+     * @type {MessageEmbedAuthor}
+     */
+    this.author = data.author ? new MessageEmbedAuthor(this, data.author) : null;
+
+    /**
+     * The provider of this embed, if there is one
+     * @type {MessageEmbedProvider}
+     */
+    this.provider = data.provider ? new MessageEmbedProvider(this, data.provider) : null;
+
+    /**
+     * The footer of this embed
+     * @type {MessageEmbedFooter}
+     */
+    this.footer = data.footer ? new MessageEmbedFooter(this, data.footer) : null;
+  }
+
+  /**
+   * The date this embed was created
+   * @type {Date}
+   */
+  get createdAt() {
+    return new Date(this.createdTimestamp);
+  }
+
+  /**
+   * The hexadecimal version of the embed color, with a leading hash.
+   * @type {string}
+   * @readonly
+   */
+  get hexColor() {
+    let col = this.color.toString(16);
+    while (col.length &lt; 6) col = `0${col}`;
+    return `#${col}`;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed.Author" id="apidoc.element.discord.js.MessageEmbed.Author">
+        function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Author
+        <span class="apidocSignatureSpan">(embed, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbedAuthor {
+  constructor(embed, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The embed this author is part of
+     * @type {MessageEmbed}
+     */
+</span>    this.embed = embed;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The name of this author
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The URL of this author
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * The icon URL of this author
+     * @type {string}
+     */
+    this.iconURL = data.icon_url;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed.Field" id="apidoc.element.discord.js.MessageEmbed.Field">
+        function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Field
+        <span class="apidocSignatureSpan">(embed, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbedField {
+  constructor(embed, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The embed this footer is part of
+     * @type {MessageEmbed}
+     */
+</span>    this.embed = embed;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The name of this field
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The value of this field
+     * @type {string}
+     */
+    this.value = data.value;
+
+    /**
+     * If this field is displayed inline
+     * @type {boolean}
+     */
+    this.inline = data.inline;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed.Footer" id="apidoc.element.discord.js.MessageEmbed.Footer">
+        function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Footer
+        <span class="apidocSignatureSpan">(embed, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbedFooter {
+  constructor(embed, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The embed this footer is part of
+     * @type {MessageEmbed}
+     */
+</span>    this.embed = embed;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The text in this footer
+     * @type {string}
+     */
+    this.text = data.text;
+
+    /**
+     * The icon URL of this footer
+     * @type {string}
+     */
+    this.iconURL = data.icon_url;
+
+    /**
+     * The proxy icon URL of this footer
+     * @type {string}
+     */
+    this.proxyIconUrl = data.proxy_icon_url;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed.Provider" id="apidoc.element.discord.js.MessageEmbed.Provider">
+        function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Provider
+        <span class="apidocSignatureSpan">(embed, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbedProvider {
+  constructor(embed, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The embed this provider is part of
+     * @type {MessageEmbed}
+     */
+</span>    this.embed = embed;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The name of this provider
+     * @type {string}
+     */
+    this.name = data.name;
+
+    /**
+     * The URL of this provider
+     * @type {string}
+     */
+    this.url = data.url;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.MessageEmbed.Thumbnail" id="apidoc.element.discord.js.MessageEmbed.Thumbnail">
+        function <span class="apidocSignatureSpan">discord.js.MessageEmbed.</span>Thumbnail
+        <span class="apidocSignatureSpan">(embed, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class MessageEmbedThumbnail {
+  constructor(embed, data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The embed this thumbnail is part of
+     * @type {MessageEmbed}
+     */
+</span>    this.embed = embed;
+
+    this.setup(data);
+  }
+
+  setup(data) {
+    /**
+     * The URL for this thumbnail
+     * @type {string}
+     */
+    this.url = data.url;
+
+    /**
+     * The Proxy URL for this thumbnail
+     * @type {string}
+     */
+    this.proxyURL = data.proxy_url;
+
+    /**
+     * The height of the thumbnail
+     * @type {number}
+     */
+    this.height = data.height;
+
+    /**
+     * The width of the thumbnail
+     * @type {number}
+     */
+    this.width = data.width;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.discord.js.Presence" id="apidoc.module.discord.js.Presence">module discord.js.Presence</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Presence.Presence" id="apidoc.element.discord.js.Presence.Presence">
+        function <span class="apidocSignatureSpan">discord.js.</span>Presence
+        <span class="apidocSignatureSpan">(data = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Presence {
+  constructor(data = {}) {
+<span class="apidocCodeCommentSpan">    /**
+     * The status of the presence:
+     *
+     * * **`online`** - user is online
+     * * **`offline`** - user is offline or invisible
+     * * **`idle`** - user is AFK
+     * * **`dnd`** - user is in Do not Disturb
+     * @type {string}
+     */
+</span>    this.status = data.status || 'offline';
+
+    /**
+     * The game that the user is playing, `null` if they aren't playing a game.
+     * @type {?Game}
+     */
+    this.game = data.game ? new Game(data.game) : null;
+  }
+
+  update(data) {
+    this.status = data.status || this.status;
+    this.game = data.game ? new Game(data.game) : null;
+  }
+
+  /**
+   * Whether this presence is equal to another
+   * @param {Presence} presence Presence to compare with
+   * @returns {boolean}
+   */
+  equals(presence) {
+    return this === presence || (
+      presence &amp;&amp;
+      this.status === presence.status &amp;&amp;
+      this.game ? this.game.equals(presence.game) : !presence.game
+    );
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.discord.js.Presence.Game" id="apidoc.element.discord.js.Presence.Game">
+        function <span class="apidocSignatureSpan">discord.js.Presence.</span>Game
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Game {
+  constructor(data) {
+<span class="apidocCodeCommentSpan">    /**
+     * The name of the game being played
+     * @type {string}
+     */
+</span>    this.name = data.name;
+
+    /**
+     * The type of the game status
+     * @type {number}
+     */
+    this.type = data.type;
+
+    /**
+     * If the game is being streamed, a link to the stream
+     * @type {?string}
+     */
+    this.url = data.url || null;
+  }
+
+  /**
+   * Whether or not the game is being streamed
+   * @type {boolean}
+   * @readonly
+   */
+  get streaming() {
+    return this.type === 1;
+  }
+
+  /**
+   * Whether this game is equal to another game
+   * @param {Game} game Game to compare with
+   * @returns {boolean}
+   */
+  equals(game) {
+    return this === game || (
+      game &amp;&amp;
+      this.name === game.name &amp;&amp;
+      this.type === game.type &amp;&amp;
+      this.url === game.url
+    );
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
